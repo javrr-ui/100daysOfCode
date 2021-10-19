@@ -1,16 +1,19 @@
 #Write your code below this line 👇
 
 def prime_checker(number):
-    count = 0
-    for n in range(1,number+1):
-        if number % n == 0:
-            count += 1
-            if count > 2:
-                break
-    if count > 2:
-        print("It's not a prime number.")
+    if number == 1:
+        print("1 it's not prime or composite number")
     else:
-        print("It's a prime number.")
+        count = 0
+        for n in range(1,number+1):
+            if number % n == 0:
+                count += 1
+                if count > 2:
+                    break
+        if count > 2:
+            print("It's not a prime number.")
+        else:
+            print("It's a prime number.")
 
 #Write your code above this line 👆
     
