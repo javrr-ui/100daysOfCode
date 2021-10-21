@@ -22,23 +22,21 @@ def encrypt(text, shift):
     cipher_text = ""
     # Iterate throught each letter from word stored in "text"
     for letter in text:
-        #Iterate throught alphabet
-        for let in alphabet:
-            if letter == let:
-                shifted_index = 0
-                #if shifted_index greater than length, reduce it until it is a valid index
-                if alphabet.index(let) + shift > length:
-                    shifted_index = (alphabet.index(let) + shift) - length - 1
-                    while True:
-                        if shifted_index > length:
-                            shifted_index -= 26
-                        else:
-                            break   
+        
+        shifted_index = 0
+        #if shifted_index greater than length, reduce it until it is a valid index
+        if alphabet.index(letter) + shift > length:
+            shifted_index = (alphabet.index(letter) + shift) - length - 1
+            while True:
+                if shifted_index > length:
+                    shifted_index -= 26
                 else:
-                    # Add letter from alphabet shifted n numbers
-                    shifted_index = alphabet.index(let) + shift
-                
-                cipher_text += alphabet[shifted_index]
+                    break   
+        else:
+            # Add letter from alphabet shifted n numbers
+            shifted_index = alphabet.index(letter) + shift
+        
+        cipher_text += alphabet[shifted_index]
 
     print(f"The encoded text is {cipher_text}")
 
