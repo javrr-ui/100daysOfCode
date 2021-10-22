@@ -6,16 +6,20 @@ shift = int(input("Type the shift number:\n"))
 
 def caesar(text, shift, direction):
     new_text = ""
+
     for letter in text:
-        position = shift % len(alphabet)
-        if direction == "encode":
-            position = alphabet.index(letter) + position
-        elif direction == "decode":
-            position = alphabet.index(letter) - position
+        if letter not in alphabet:
+            new_text += letter
         else:
-            print("That option does not exist")
-            break
-        new_text += alphabet[position]
+            position = shift % len(alphabet)
+            if direction == "encode":
+                position = alphabet.index(letter) + position
+            elif direction == "decode":
+                position = alphabet.index(letter) - position
+            else:
+                print("That option does not exist")
+                break
+            new_text += alphabet[position]
     
     print(f"The {direction}d text is {new_text}")
     
