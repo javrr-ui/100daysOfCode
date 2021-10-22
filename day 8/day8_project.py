@@ -1,10 +1,11 @@
 from art import logo
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 print(logo)
+
 
 def caesar(text, shift, direction):
     new_text = ""
-    
 
     for letter in text:
         if letter not in alphabet:
@@ -19,9 +20,10 @@ def caesar(text, shift, direction):
             else:
                 print("That option does not exist")
                 break
-            
-    
+
     print(f"The {direction}d text is: {new_text}")
+
+
 option = "yes"
 while option == "yes":
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
