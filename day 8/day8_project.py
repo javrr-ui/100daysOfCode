@@ -21,7 +21,7 @@ def caesar(text, shift, direction):
                 break
             
     
-    print(f"The {direction}d text is {new_text}")
+    print(f"The {direction}d text is: {new_text}")
 option = "yes"
 while option == "yes":
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
