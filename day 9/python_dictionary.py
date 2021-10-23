@@ -24,3 +24,17 @@ programming_dictionary["Bug"] = "A moth in your computer"
 #loop through a dictionary
 for key in programming_dictionary:
     print(f"{key}: {programming_dictionary[key]}")
+
+
+
+#Nesting a list in a dictionary
+travel_log = {
+    "France": ["Paris", "Lille", "Dijon"],
+    "Germany": ["Berlin", "Hamburg", "Stuttgard"]
+}
+
+#Nesting a dictionary in a dictionary
+travel_log = {
+    "France": {"cities_visited": ["Paris", "Lille", "Dijon"], "total_visits": 12},
+    "Germany": ["Berlin", "Hamburg", "Stuttgard"]
+}
