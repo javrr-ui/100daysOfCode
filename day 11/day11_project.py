@@ -41,6 +41,8 @@ def play():
         play()
 
     print(logo)
+    player_cards.append(choice(cards))
+    player_cards.append(choice(cards))
 
 clear()
 play()
