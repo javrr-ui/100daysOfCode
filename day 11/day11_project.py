@@ -38,5 +38,7 @@ def play():
         clear()
         play()
 
+    print(logo)
+
 clear()
 play()
