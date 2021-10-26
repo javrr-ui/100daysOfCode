@@ -1,5 +1,5 @@
 #calculator
-
+from art import logo
 
 # Add
 def add(n1, n2):
@@ -25,7 +25,8 @@ operations = {
 }
 
 def calculator():
-    num1 = int(input("What's the first number?: "))
+    print(logo)
+    num1 = float(input("What's the first number?: "))
 
     for operation in operations:
         print(operation)
@@ -34,7 +35,7 @@ def calculator():
     while continue_program:
 
         symbol = input("Pick and operation: ")
-        num2 = int(input("What's the next number?: "))
+        num2 = float(input("What's the next number?: "))
 
         calculation_function = operations[symbol]
         result = calculation_function(num1, num2)
