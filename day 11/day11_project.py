@@ -24,3 +24,6 @@
 #Then try out the completed Blackjack project here: 
 #   http://blackjack-final.appbrewery.repl.run
 
+from os import system
+from random import choice
+from art import logo
