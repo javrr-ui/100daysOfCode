@@ -29,6 +29,8 @@ from random import choice
 from art import logo
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+player_cards = []
+cpu_cards = []
 
 def clear():
     _ = system("cls")
