@@ -38,6 +38,8 @@ def clear():
     _ = system("cls")
 
 def play():
+    global player_score
+    global cpu_score
     if not input('Do you want to play a game of Blackjack? Type "y" or "n": ').lower() == "y":
         clear()
         play()
@@ -45,6 +47,11 @@ def play():
     print(logo)
     player_cards.append(choice(cards))
     player_cards.append(choice(cards))
+ 
+    for value in player_cards:
+        player_score += value
+
+    print(f"Your cards: {player_cards}, current score is {player_score}")
 
 clear()
 play()
