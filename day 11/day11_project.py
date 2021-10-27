@@ -64,12 +64,12 @@ def play():
         play()
 
     print(logo)
-    draw_card("player")
+    draw_card(name="player",count=2)
  
     for value in player_cards:
         player_score += value
 
-    draw_card("cpu")
+    draw_card(name="cpu",count=2)
 
     for value in cpu_cards:
         cpu_score += value 
