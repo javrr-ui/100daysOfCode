@@ -61,7 +61,7 @@ def play():
         cpu_score += value 
 
     print_cards()
-    
+
     draw_again  = True
     while draw_again:
        
@@ -73,7 +73,11 @@ def play():
             print_cards()
         else:
             draw_again = False
-            print(f"Your final hand: {player_cards}, final score: {player_score}")
+
+        if player_score > 21:
+            draw_again = False
+    
+    print(f"Your final hand: {player_cards}, final score: {player_score}")
 
 clear()
 play()
