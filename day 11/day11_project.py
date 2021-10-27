@@ -50,7 +50,9 @@ def clear():
     _ = system("cls")
 
 def print_cards():
-    print(f"Your cards: {player_cards}, current score is {player_score}")
+    cards = players["player"].get("cards")
+    score = get_score("player")
+    print(f"Your cards: {cards}, current score is {score}")
 
 def draw_card(player_name, count):
     for i in range(count):
