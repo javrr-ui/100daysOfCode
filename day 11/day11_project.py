@@ -68,6 +68,10 @@ def calc_score(player_name):
 
 def get_score(player_name):
     return players[player_name].get("score")
+
+def get_cards(player_name):
+    return players[player_name].get("cards")
+    
 def play():
     global player_score
     global cpu_score
