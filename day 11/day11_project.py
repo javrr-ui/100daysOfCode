@@ -108,7 +108,7 @@ def play():
             if cpu_score > 21:
                 break
 
-    print(f"Your final hand: {player_cards}, final score: {player_score}")
+    print(f'Your final hand: {player_cards}, final score: {get_score("player")}')
     print(f"Computers final hand: {cpu_cards}, final score: {cpu_score}")
 
 clear()
