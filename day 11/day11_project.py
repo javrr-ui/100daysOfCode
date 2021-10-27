@@ -29,6 +29,18 @@ from random import choice
 from art import logo
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+players = {
+    "player": {
+        "cards": [],
+        "score": 0
+    },
+    "cpu": {
+        "cards": [],
+        "score": 0
+    }
+}
+
 player_cards = []
 cpu_cards = []
 player_score = 0
@@ -40,10 +52,10 @@ def clear():
 def print_cards():
     print(f"Your cards: {player_cards}, current score is {player_score}")
 
-def draw_card(player_list, count):
+def draw_card(player_name, count):
     for i in range(count):
-        player_list.append(choice(cards))
-
+        players[player_name].get("cards").append(choice(cards))
+    
 def play():
     global player_score
     global cpu_score
@@ -52,12 +64,12 @@ def play():
         play()
 
     print(logo)
-    draw_card(player_cards,2)
+    draw_card("player")
  
     for value in player_cards:
         player_score += value
 
-    draw_card(cpu_cards,2)
+    draw_card("cpu")
 
     for value in cpu_cards:
         cpu_score += value 
