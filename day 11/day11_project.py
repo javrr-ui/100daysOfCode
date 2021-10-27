@@ -55,7 +55,14 @@ def print_cards():
 def draw_card(player_name, count):
     for i in range(count):
         players[player_name].get("cards").append(choice(cards))
-    
+
+def calc_score(player_name):
+    card_list = players[player_name].get("cards")
+    score = players[player_name].get("score")
+    score = 0
+    for card in card_list:
+        score += card
+
 def play():
     global player_score
     global cpu_score
