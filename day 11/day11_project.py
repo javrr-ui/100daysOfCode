@@ -41,11 +41,6 @@ players = {
     }
 }
 
-player_cards = []
-cpu_cards = []
-player_score = 0
-cpu_score = 0
-
 def clear():
     _ = system("cls")
 
@@ -73,8 +68,6 @@ def get_cards(player_name):
     return players[player_name].get("cards")
 
 def play():
-    global player_score
-    global cpu_score
     if not input('Do you want to play a game of Blackjack? Type "y" or "n": ').lower() == "y":
         clear()
         play()
@@ -98,17 +91,14 @@ def play():
         if get_score("player") > 21:
             break
     
+    cpu_score = get_score("cpu")
     if cpu_score <= 16:
-        card = choice(cards)
-        cpu_cards.append(card)
-        cpu_score += card
+        draw_card("cpu", 1)
         while True:
             if cpu_score > 16 and cpu_score <= 21:
                 break
             if cpu_score <= 16:
-                card = choice(cards)
-                cpu_cards.append(card)
-                cpu_score += card
+                draw_card("cpu", 1)
             if cpu_score > 21:
                 break
 
