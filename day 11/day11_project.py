@@ -64,6 +64,8 @@ def calc_score(player_name):
     for card in card_list:
         score += card
 
+def get_score(player_name):
+    return players[player_name].get("score")
 def play():
     global player_score
     global cpu_score
@@ -82,9 +84,7 @@ def play():
         first_card = players["cpu"].get("cards")[0] 
         print(f"Computer first card: { first_card }")
         if input('Type "y" to get another card, type "n" to pass: ').lower() == "y":
-            card = choice(cards)
-            player_cards.append(card)
-            player_score += card
+            draw_card("player",count=1)
             print_cards()
         else:
             break
