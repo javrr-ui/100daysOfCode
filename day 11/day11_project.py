@@ -89,7 +89,7 @@ def play():
         else:
             break
 
-        if player_score > 21:
+        if get_score("player") > 21:
             break
     
     if cpu_score <= 16:
