@@ -37,6 +37,9 @@ cpu_score = 0
 def clear():
     _ = system("cls")
 
+def print_cards():
+    print(f"Your cards: {player_cards}, current score is {player_score}")
+
 def play():
     global player_score
     global cpu_score
@@ -51,7 +54,22 @@ def play():
     for value in player_cards:
         player_score += value
 
-    print(f"Your cards: {player_cards}, current score is {player_score}")
+    cpu_cards.append(choice(cards))
+    cpu_cards.append(choice(cards))
+
+    for value in cpu_cards:
+        cpu_score += value 
+
+
+    print_cards()
+    print(f"Computer first card: {cpu_cards[0]}")
+    if input('Type "y" to get another card, type "n" to pass: ').lower() == "y":
+        card = choice(cards)
+        player_cards.append(card)
+        player_score += card
+        print_cards()
+    else:
+        print(f"Your final hand: {player_cards}, final score: {player_score}")
 
 clear()
 play()
