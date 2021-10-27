@@ -71,7 +71,7 @@ def get_score(player_name):
 
 def get_cards(player_name):
     return players[player_name].get("cards")
-    
+
 def play():
     global player_score
     global cpu_score
@@ -112,8 +112,8 @@ def play():
             if cpu_score > 21:
                 break
 
-    print(f'Your final hand: {player_cards}, final score: {get_score("player")}')
-    print(f"Computers final hand: {cpu_cards}, final score: {cpu_score}")
+    print(f'Your final hand: {get_cards("player")}, final score: {get_score("player")}')
+    print(f'Computers final hand: {get_cards("cpu")}, final score: {get_score("cpu")}')
 
 clear()
 play()
