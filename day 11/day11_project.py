@@ -40,9 +40,9 @@ def clear():
 def print_cards():
     print(f"Your cards: {player_cards}, current score is {player_score}")
 
-def draw_card(user, count):
+def draw_card(player_list, count):
     for i in range(count):
-        user.append(choice(cards))
+        player_list.append(choice(cards))
 
 def play():
     global player_score
