@@ -72,15 +72,15 @@ def play():
         play()
 
     print(logo)
-    draw_card(name="player",count=2)
-    draw_card(name="cpu",count=2)
+    draw_card(player_name="player",count=2)
+    draw_card(player_name="cpu",count=2)
 
     print_cards()
 
     draw_again  = True
     while draw_again:
-       
-        print(f"Computer first card: {cpu_cards[0]}")
+        first_card = players["cpu"].get("cards")[0] 
+        print(f"Computer first card: { first_card }")
         if input('Type "y" to get another card, type "n" to pass: ').lower() == "y":
             card = choice(cards)
             player_cards.append(card)
