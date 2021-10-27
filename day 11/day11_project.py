@@ -91,15 +91,16 @@ def play():
         if get_score("player") > 21:
             break
     
-    cpu_score = get_score("cpu")
-    if cpu_score <= 16:
+    
+    if get_score("cpu") <= 16:
         draw_card("cpu", 1)
         while True:
-            if cpu_score > 16 and cpu_score <= 21:
+            if get_score("cpu") > 16 and get_score("cpu") <= 21:
                 break
-            if cpu_score <= 16:
+            if get_score("cpu") <= 16:
                 draw_card("cpu", 1)
-            if cpu_score > 21:
+                continue
+            if get_score("cpu") > 21:
                 break
 
     print(f'Your final hand: {get_cards("player")}, final score: {get_score("player")}')
