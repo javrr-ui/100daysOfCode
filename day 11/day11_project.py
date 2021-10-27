@@ -61,10 +61,10 @@ def draw_card(player_name, count):
 
 def calc_score(player_name):
     card_list = players[player_name].get("cards")
-    score = players[player_name].get("score")
     score = 0
     for card in card_list:
         score += card
+    players[player_name]["score"] = score
 
 def get_score(player_name):
     return players[player_name].get("score")
