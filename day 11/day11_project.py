@@ -40,6 +40,10 @@ def clear():
 def print_cards():
     print(f"Your cards: {player_cards}, current score is {player_score}")
 
+def draw_card(user, count):
+    for i in range(count):
+        user.append(choice(cards))
+
 def play():
     global player_score
     global cpu_score
@@ -48,14 +52,12 @@ def play():
         play()
 
     print(logo)
-    player_cards.append(choice(cards))
-    player_cards.append(choice(cards))
+    draw_card(player_cards,2)
  
     for value in player_cards:
         player_score += value
 
-    cpu_cards.append(choice(cards))
-    cpu_cards.append(choice(cards))
+    draw_card(cpu_cards,2)
 
     for value in cpu_cards:
         cpu_score += value 
@@ -76,6 +78,16 @@ def play():
 
         if player_score > 21:
             draw_again = False
+    
+    if cpu_score < 15:
+        cpu_draw_card = True
+        while cpu_draw_card:
+            card = choice(cards)
+            cpu_cards.append(card)
+            cpu_score += card
+
+
+
     
     print(f"Your final hand: {player_cards}, final score: {player_score}")
 
