@@ -31,6 +31,8 @@ from art import logo
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 player_cards = []
 cpu_cards = []
+player_score = 0
+cpu_score = 0
 
 def clear():
     _ = system("cls")
