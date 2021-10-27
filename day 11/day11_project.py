@@ -74,22 +74,27 @@ def play():
             player_score += card
             print_cards()
         else:
-            draw_again = False
+            break
 
         if player_score > 21:
-            draw_again = False
+            break
     
-    if cpu_score < 15:
-        cpu_draw_card = True
-        while cpu_draw_card:
-            card = choice(cards)
-            cpu_cards.append(card)
-            cpu_score += card
+    if cpu_score <= 16:
+        card = choice(cards)
+        cpu_cards.append(card)
+        cpu_score += card
+        while True:
+            if cpu_score > 16 and cpu_score <= 21:
+                break
+            if cpu_score <= 16:
+                card = choice(cards)
+                cpu_cards.append(card)
+                cpu_score += card
+            if cpu_score > 21:
+                break
 
-
-
-    
     print(f"Your final hand: {player_cards}, final score: {player_score}")
+    print(f"Computers final hand: {cpu_cards}, final score: {cpu_score}")
 
 clear()
 play()
