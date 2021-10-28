@@ -79,39 +79,46 @@ def play():
         play()
 
     print(logo)
-    draw_card(player_name="player",count=2)
-    draw_card(player_name="cpu",count=2)
+    player_score = draw_card(player_name="player",count=2)
+    cpu_score = draw_card(player_name="cpu",count=2)
 
-    print_cards()
-    
-    while True:
-        first_card = players["cpu"].get("cards")[0] 
-        print(f"Computer first card: { first_card }")
-        if input('Type "y" to get another card, type "n" to pass: ').lower() == "y":
-            draw_card("player",count=1)
-            
-        else:
-            break
-        if get_score("player") < 21:
-            print_cards()
+    if cpu_score == 0 and not player_score == 0:
+        print("Computer Blackjack, you lose")
+    elif not cpu_score == 0 and player_score == 0:
+        print("Player Blackjack you win!")
+    else:
 
-        if get_score("player") >= 21:
-            break
-    
-    
-    if get_score("cpu") <= 16:
-        draw_card("cpu", 1)
+        print_cards()
         while True:
-            if get_score("cpu") > 16 and get_score("cpu") <= 21:
+            first_card = players["cpu"].get("cards")[0] 
+            print(f"Computer first card: { first_card }")
+            if input('Type "y" to get another card, type "n" to pass: ').lower() == "y":
+                draw_card("player",count=1)
+                
+            else:
                 break
-            if get_score("cpu") <= 16:
-                draw_card("cpu", 1)
-                continue
-            if get_score("cpu") > 21:
-                break
+            if get_score("player") < 21:
+                print_cards()
 
-    print(f'Your final hand: {get_cards("player")}, final score: {get_score("player")}')
-    print(f'Computers final hand: {get_cards("cpu")}, final score: {get_score("cpu")}')
+            if get_score("player") >= 21:
+                break
+        
+        
+        if get_score("cpu") <= 16:
+            draw_card("cpu", 1)
+            while True:
+                if get_score("cpu") > 16 and get_score("cpu") <= 21:
+                    break
+                if get_score("cpu") <= 16:
+                    draw_card("cpu", 1)
+                    continue
+                if get_score("cpu") > 21:
+                    break
+
+        print(f'Your final hand: {get_cards("player")}, final score: {get_score("player")}')
+        print(f'Computers final hand: {get_cards("cpu")}, final score: {get_score("cpu")}')
+        
+    play()
 
 clear()
 play()
