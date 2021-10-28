@@ -56,10 +56,15 @@ def draw_card(player_name, count):
 
 def calc_score(player_name):
     card_list = players[player_name].get("cards")
+
+    if len(card_list) == 2 and sum(card_list) == 21:
+        return 0
+
     score = 0
     for card in card_list:
         score += card
     players[player_name]["score"] = score
+    return score
 
 def get_score(player_name):
     return players[player_name].get("score")
