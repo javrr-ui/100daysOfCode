@@ -52,7 +52,8 @@ def print_cards():
 def draw_card(player_name, count):
     for i in range(count):
         players[player_name].get("cards").append(choice(cards))
-    calc_score(player_name)
+
+    return calc_score(player_name)
 
 def calc_score(player_name):
     card_list = players[player_name].get("cards")
