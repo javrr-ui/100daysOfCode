@@ -77,17 +77,19 @@ def play():
     draw_card(player_name="cpu",count=2)
 
     print_cards()
-
+    
     while True:
         first_card = players["cpu"].get("cards")[0] 
         print(f"Computer first card: { first_card }")
         if input('Type "y" to get another card, type "n" to pass: ').lower() == "y":
             draw_card("player",count=1)
-            print_cards()
+            
         else:
             break
+        if get_score("player") < 21:
+            print_cards()
 
-        if get_score("player") > 21:
+        if get_score("player") >= 21:
             break
     
     
