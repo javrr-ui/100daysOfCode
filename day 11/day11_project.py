@@ -78,8 +78,7 @@ def play():
 
     print_cards()
 
-    draw_again  = True
-    while draw_again:
+    while True:
         first_card = players["cpu"].get("cards")[0] 
         print(f"Computer first card: { first_card }")
         if input('Type "y" to get another card, type "n" to pass: ').lower() == "y":
