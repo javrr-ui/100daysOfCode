@@ -49,12 +49,6 @@ def print_cards():
     score = get_score("player")
     print(f"Your cards: {cards}, current score is {score}")
 
-def draw_card(player_name, count):
-    for i in range(count):
-        players[player_name].get("cards").append(choice(cards))
-
-    return calc_score(player_name)
-
 def calc_score(player_name):
     card_list = players[player_name].get("cards")
 
@@ -66,6 +60,15 @@ def calc_score(player_name):
         score += card
     players[player_name]["score"] = score
     return score
+
+def draw_card(player_name, count):
+    for i in range(count):
+        card = choice(cards)
+        if card == 11 and calc_score(player_name) + card > 21:
+            card = 1
+        players[player_name].get("cards").append(card)
+
+    return calc_score(player_name)
 
 def get_score(player_name):
     return players[player_name].get("score")
