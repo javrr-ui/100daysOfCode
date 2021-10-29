@@ -88,13 +88,15 @@ def play():
     player_score = draw_card(player_name="player",count=2)
     cpu_score = draw_card(player_name="cpu",count=2)
 
+    print_cards()
+
     if cpu_score == 0 and not player_score == 0:
         print("Computer Blackjack, you lose")
     elif not cpu_score == 0 and player_score == 0:
         print("Player Blackjack you win!")
     else:
 
-        print_cards()
+        
         while True:
             first_card = players["cpu"].get("cards")[0] 
             print(f"Computer first card: { first_card }")
