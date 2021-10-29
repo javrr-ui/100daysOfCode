@@ -73,7 +73,13 @@ def get_score(player_name):
 def get_cards(player_name):
     return players[player_name].get("cards")
 
+def reset_stats():
+    for player in players:
+        players[player]["cards"] = []
+        players[player]["score"] = 0
+
 def play():
+    reset_stats()
     if not input('Do you want to play a game of Blackjack? Type "y" or "n": ').lower() == "y":
         clear()
         play()
