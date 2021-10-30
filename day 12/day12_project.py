@@ -6,6 +6,8 @@ def clear():
     _ = system("cls")
 
 def play_game():
+    random_number = random.randint(0,100)
+    
     #clear console before starting the game
     clear()
     print(logo)
