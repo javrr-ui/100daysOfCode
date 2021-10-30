@@ -86,7 +86,7 @@ def play():
     if not input('Do you want to play a game of Blackjack? Type "y" or "n": ').lower() == "y":
         clear()
         play()
-
+    clear()
     print(logo)
     player_score = draw_card(player_name="player",count=2)
     cpu_score = draw_card(player_name="cpu",count=2)
