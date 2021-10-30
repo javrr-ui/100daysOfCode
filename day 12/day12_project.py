@@ -16,5 +16,10 @@ def play_game():
     if not difficulty == "easy" or not difficulty == "hard":
         input("That's not a valid option, please try again\nPress Enter to continue")
         play_game()
+        
+    if difficulty == "easy":
+        attempts = 10
+    if difficulty == "hard":
+        attempts = 5
 
 play_game()
