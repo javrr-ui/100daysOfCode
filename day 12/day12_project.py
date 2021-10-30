@@ -12,11 +12,11 @@ def play_game():
     clear()
     print(logo)
     print("Welcome to the Number Guessing Game!")
-    difficulty = input('Choose a difficulty. Type "easy" or "hard": ')
+    difficulty = input('Choose a difficulty. Type "easy" or "hard": ').lower()
     if not difficulty == "easy" or not difficulty == "hard":
         input("That's not a valid option, please try again\nPress Enter to continue")
         play_game()
-        
+
     if difficulty == "easy":
         attempts = 10
     if difficulty == "hard":
