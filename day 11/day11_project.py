@@ -128,6 +128,17 @@ def play():
 
         print(f'Your final hand: {get_cards("player")}, final score: {get_score("player")}')
         print(f'Computers final hand: {get_cards("cpu")}, final score: {get_score("cpu")}')
+
+        if get_score("player") == get_score("cpu"):
+            print("Draw")
+        elif  get_score("player") > get_score("cpu") and get_score("player") <= 21:
+            print("You win!")
+        elif  get_score("player") < get_score("cpu") and get_score("cpu") <= 21:
+            print("You lose!")
+        elif get_score("player") <= 21 and get_score("cpu") > 21:
+            print("You win!")
+        elif get_score("player") > 21 and get_score("cpu") <= 21:
+            print("You lose!")
         
     play()
 
