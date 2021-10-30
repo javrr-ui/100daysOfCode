@@ -96,7 +96,7 @@ def play():
     if cpu_score == 0 and not player_score == 0:
         print("Computer Blackjack, you lose")
     elif not cpu_score == 0 and player_score == 0:
-        print("Player Blackjack you win!")
+        print("Win with a Blackjack!")
     else:
 
         
