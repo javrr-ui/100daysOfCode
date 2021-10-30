@@ -22,4 +22,6 @@ def play_game():
     if difficulty == "hard":
         attempts = 5
 
+    print(f"You have {attempts} attempts left to guess the number.")
+
 play_game()
