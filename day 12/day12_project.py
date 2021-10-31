@@ -16,12 +16,12 @@ def play_game():
     if not difficulty == "easy" and not difficulty == "hard":
         input("That's not a valid option, please try again\nPress Enter to continue")
         play_game()
+    else: 
+        if difficulty == "easy":
+            attempts = 10
+        if difficulty == "hard":
+            attempts = 5
 
-    if difficulty == "easy":
-        attempts = 10
-    if difficulty == "hard":
-        attempts = 5
-
-    print(f"You have {attempts} attempts left to guess the number.")
+        print(f"You have {attempts} attempts left to guess the number.")
 
 play_game()
