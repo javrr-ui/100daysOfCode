@@ -22,6 +22,7 @@ def play_game():
         if difficulty == "hard":
             attempts = 5
 
+        print("I'm thinking of a number between 1 and 100")
         print(f"You have {attempts} attempts left to guess the number.")
 
 play_game()
