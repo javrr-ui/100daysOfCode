@@ -24,5 +24,6 @@ def play_game():
 
         print("I'm thinking of a number between 1 and 100")
         print(f"You have {attempts} attempts left to guess the number.")
+        user_answer = int(input("Make a guess: "))
 
 play_game()
