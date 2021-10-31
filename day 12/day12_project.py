@@ -24,15 +24,17 @@ def play_game():
             attempts = 5
 
         print("I'm thinking of a number between 1 and 100")
-        print(f"You have {attempts} attempts left to guess the number.")
-        user_answer = int(input("Make a guess: "))
-        if user_answer == random_number:
-            print(f"You got it! The answer was {random_number}")
-        elif user_answer < random_number:
-            attempts -= 1
-            print("Too low.\nGuess again.")
-        elif user_answer > random_number:
-            attempts -= 1
-            print("Too high.\nGuess again.")
+        while attempts > 0:
+            print(f"You have {attempts} attempts left to guess the number.")
+            user_answer = int(input("Make a guess: "))
+            if user_answer == random_number:
+                print(f"You got it! The answer was {random_number}")
+                break
+            elif user_answer < random_number:
+                attempts -= 1
+                print("Too low.\nGuess again.")
+            elif user_answer > random_number:
+                attempts -= 1
+                print("Too high.\nGuess again.")
 
 play_game()
