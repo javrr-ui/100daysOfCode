@@ -49,5 +49,9 @@ def play_game():
                 if attempts == 1:
                     print("You lose")
                 attempts -= 1
-
+                
+        play_again = input("Do you want to play again?: ")
+        if play_again == "yes":
+            play_game()
+        
 play_game()
