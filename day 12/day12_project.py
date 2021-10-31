@@ -10,6 +10,7 @@ def play_game():
     
     #clear console before starting the game
     clear()
+    print(random_number)
     print(logo)
     print("Welcome to the Number Guessing Game!")
     difficulty = input('Choose a difficulty. Type "easy" or "hard": ').lower()
@@ -25,5 +26,11 @@ def play_game():
         print("I'm thinking of a number between 1 and 100")
         print(f"You have {attempts} attempts left to guess the number.")
         user_answer = int(input("Make a guess: "))
+        if user_answer == random_number:
+            print(f"You got it! The answer was {random_number}")
+        elif user_answer < random_number:
+            print("Too low.\nGuess again.")
+        elif user_answer > random_number:
+            print("Too high.\nGuess again.")
 
 play_game()
