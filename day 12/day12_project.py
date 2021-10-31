@@ -31,10 +31,18 @@ def play_game():
                 print(f"You got it! The answer was {random_number}")
                 break
             elif user_answer < random_number:
+                print("Too low.")
+                if attempts == 1:
+                    print("You lose")
+                else:
+                    print("Guess again.")
                 attempts -= 1
-                print("Too low.\nGuess again.")
             elif user_answer > random_number:
+                print("Too high.")
+                if attempts == 1:
+                    print("You lose")
+                else:
+                    print("Guess again.")
                 attempts -= 1
-                print("Too high.\nGuess again.")
 
 play_game()
