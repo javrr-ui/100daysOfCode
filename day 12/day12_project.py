@@ -14,7 +14,7 @@ def play_game():
     
     #clear console before starting the game
     clear()
-    print(random_number)
+    #print(random_number)
     print(logo)
     print("Welcome to the Number Guessing Game!")
     difficulty = input('Choose a difficulty. Type "easy" or "hard": ').lower()
@@ -49,7 +49,7 @@ def play_game():
                 if attempts == 1:
                     print("You lose")
                 attempts -= 1
-                
+
         play_again = input("Do you want to play again?: ")
         if play_again == "yes":
             play_game()
