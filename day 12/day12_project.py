@@ -29,8 +29,10 @@ def play_game():
         if user_answer == random_number:
             print(f"You got it! The answer was {random_number}")
         elif user_answer < random_number:
+            attempts -= 1
             print("Too low.\nGuess again.")
         elif user_answer > random_number:
+            attempts -= 1
             print("Too high.\nGuess again.")
 
 play_game()
