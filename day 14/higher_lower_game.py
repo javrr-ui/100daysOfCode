@@ -11,3 +11,5 @@ def clear():
 def game():
     clear()
     print(logo)
+
+game()
