@@ -27,4 +27,10 @@ def game():
     if score > 0 and game_over == False:
         print(message)
 
+    a = get_data()
+    b = get_data()
+    print(f"Compare A: {data_string(a)}")
+    print(vs)
+    print(f"Against B: {data_string(b)}")
+
 game()
