@@ -43,4 +43,8 @@ def game():
         score += 1
         a = b
         game()
+    else:
+        clear()
+        print(logo)
+        print(f"Sorry, that's wrong. Final score: {score}")
 game()
