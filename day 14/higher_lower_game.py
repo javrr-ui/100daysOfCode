@@ -33,4 +33,6 @@ def game():
     print(vs)
     print(f"Against B: {data_string(b)}")
 
+    user_input = input('Who has more followers? Type "A" or "B": ').lower()
+
 game()
