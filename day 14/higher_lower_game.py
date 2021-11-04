@@ -5,7 +5,6 @@ from game_data import data
 from random import choice
 from os import system
 
-game_over = False
 score = 0
 a = choice(data)
 
@@ -27,7 +26,7 @@ def game():
     message = f"You're right! Current score: {score}"
     clear()
     print(logo)
-    if score > 0 and game_over == False:
+    if score > 0:
         print(message)
 
     
