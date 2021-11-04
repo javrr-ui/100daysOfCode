@@ -41,5 +41,6 @@ def game():
     b_count = b["follower_count"]
     if  (a_count > b_count and user_input == "a") or (b_count > a_count and user_input == "b"):
         score += 1
+        a = b
         game()
 game()
