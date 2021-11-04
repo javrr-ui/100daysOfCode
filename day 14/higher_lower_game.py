@@ -10,7 +10,13 @@ def clear():
 
 def get_data():
     return choice(data)
-    
+
+def data_string(dataset):
+    """
+        Receive a dataset and return a String with formated info
+    """
+    return f'{dataset["name"]}, a {dataset["description"]}, from {dataset["country"]}'
+
 def game():
     clear()
     print(logo)
