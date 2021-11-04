@@ -22,6 +22,7 @@ def data_string(dataset):
     return f'{dataset["name"]}, a {dataset["description"]}, from {dataset["country"]}'
 
 def game():
+    global score
     clear()
     print(logo)
     if score > 0 and game_over == False:
