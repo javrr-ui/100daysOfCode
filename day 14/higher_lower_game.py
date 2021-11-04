@@ -49,4 +49,8 @@ def game():
         clear()
         print(logo)
         print(f"Sorry, that's wrong. Final score: {score}")
+        play_again = input('Do you want to play again? Type "Yes" or "No": ').lower()
+        if play_again == "yes":
+            score = 0
+            game()
 game()
