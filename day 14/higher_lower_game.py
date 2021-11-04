@@ -34,9 +34,9 @@ def game():
     while a == b:
         b = get_data()
 
-    print(f"Compare A: {data_string(a)} {a['follower_count']}")
+    print(f"Compare A: {data_string(a)}")
     print(vs)
-    print(f"Against B: {data_string(b)} {b['follower_count']}")
+    print(f"Against B: {data_string(b)}")
 
     user_input = input('Who has more followers? Type "A" or "B": ').lower()
     a_count = a["follower_count"]
@@ -52,5 +52,6 @@ def game():
         play_again = input('Do you want to play again? Type "Yes" or "No": ').lower()
         if play_again == "yes":
             score = 0
+            a = get_data()
             game()
 game()
