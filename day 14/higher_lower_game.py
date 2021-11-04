@@ -31,6 +31,9 @@ def game():
 
     
     b = get_data()
+    while a == b:
+        b = get_data()
+
     print(f"Compare A: {data_string(a)} {a['follower_count']}")
     print(vs)
     print(f"Against B: {data_string(b)} {b['follower_count']}")
