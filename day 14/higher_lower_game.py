@@ -8,6 +8,9 @@ from os import system
 def clear():
     _ = system("cls")
 
+def get_data():
+    return choice(data)
+    
 def game():
     clear()
     print(logo)
