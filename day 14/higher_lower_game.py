@@ -7,6 +7,7 @@ from os import system
 
 game_over = False
 score = 0
+a = choice(data)
 
 def clear():
     _ = system("cls")
@@ -22,13 +23,14 @@ def data_string(dataset):
 
 def game():
     global score
+    global a
     message = f"You're right! Current score: {score}"
     clear()
     print(logo)
     if score > 0 and game_over == False:
         print(message)
 
-    a = get_data()
+    
     b = get_data()
     print(f"Compare A: {data_string(a)} {a['follower_count']}")
     print(vs)
