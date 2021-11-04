@@ -7,3 +7,7 @@ from os import system
 
 def clear():
     _ = system("cls")
+
+def game():
+    clear()
+    print(logo)
