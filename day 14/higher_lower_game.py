@@ -18,7 +18,11 @@ def data_string(dataset):
     return f'{dataset["name"]}, a {dataset["description"]}, from {dataset["country"]}'
 
 def game():
+    score = 0
+    message = f"You're right! Current score: {score}"
     clear()
     print(logo)
+    if score > 0:
+        print(message)
 
 game()
