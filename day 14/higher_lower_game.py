@@ -6,6 +6,8 @@ from random import choice
 from os import system
 
 game_over = False
+score = 0
+message = f"You're right! Current score: {score}"
 
 def clear():
     _ = system("cls")
@@ -20,8 +22,6 @@ def data_string(dataset):
     return f'{dataset["name"]}, a {dataset["description"]}, from {dataset["country"]}'
 
 def game():
-    score = 0
-    message = f"You're right! Current score: {score}"
     clear()
     print(logo)
     if score > 0 and game_over == False:
