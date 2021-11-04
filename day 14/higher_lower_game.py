@@ -30,10 +30,12 @@ def game():
 
     a = get_data()
     b = get_data()
-    print(f"Compare A: {data_string(a)}")
+    print(f"Compare A: {data_string(a)} {a['follower_count']}")
     print(vs)
-    print(f"Against B: {data_string(b)}")
+    print(f"Against B: {data_string(b)} {b['follower_count']}")
 
     user_input = input('Who has more followers? Type "A" or "B": ').lower()
-
+    if a["follower_count"] > b["follower_count"] and user_input == "a":
+        score += 1
+        game()
 game()
