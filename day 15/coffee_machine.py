@@ -30,8 +30,10 @@ resources = {
     "coffee": 100,
 }
 
-# TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
 
+# TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
+def run():
+    user_input = input("What would you like? (espresso/latte/cappuccino): ")
 # TODO: 2. Turn off the Coffee Machine by entering “off” to the prompt.
 
 # TODO: 3. Print report.
@@ -43,3 +45,5 @@ resources = {
 # TODO: 6. Check transaction successful?
 
 # TODO: 7. Make Coffee.
+
+run()
