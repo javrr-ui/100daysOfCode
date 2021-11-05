@@ -31,9 +31,23 @@ resources = {
 }
 
 
+def make_coffee(type):
+    if type == "espresso":
+        # make espresso
+        pass
+    elif type == "latte":
+        # make latte
+        pass
+    elif type == "cappuccino":
+        # make cappuccino
+        pass
+
+
 # TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
 def run():
     user_input = input("What would you like? (espresso/latte/cappuccino): ")
+
+
 # TODO: 2. Turn off the Coffee Machine by entering “off” to the prompt.
 
 # TODO: 3. Print report.
