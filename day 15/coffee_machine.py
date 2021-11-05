@@ -51,11 +51,24 @@ def run():
     else:
         print("That's not a valid option!")
 
+
 # TODO: 2. Turn off the Coffee Machine by entering “off” to the prompt.
 
 # TODO: 3. Print report.
 
 # TODO: 4. Check resources sufficient?
+def check_resources(coffee_type):
+    # List used to store ingredients with not enough quantity
+    ingredient_list = []
+    coffee = MENU[coffee_type]
+    for ingredient in coffee["ingredients"]:
+        # Check if there's enough ingredient quantity to prepare the coffee
+        if resources[ingredient] >= coffee["ingredients"][ingredient]:
+            print(f"{ingredient}: {coffee['ingredients'][ingredient]} ok")
+        else:
+            ingredient_list.append(ingredient)
+    return ingredient_list
+
 
 # TODO: 5. Process coins.
 
@@ -64,3 +77,4 @@ def run():
 # TODO: 7. Make Coffee.
 
 run()
+print(check_resources("latte"))
