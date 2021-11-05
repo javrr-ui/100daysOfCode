@@ -46,7 +46,10 @@ def make_coffee(type):
 # TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
 def run():
     user_input = input("What would you like? (espresso/latte/cappuccino): ")
-
+    if user_input in MENU.keys():
+        make_coffee(user_input)
+    else:
+        print("That's not a valid option!")
 
 # TODO: 2. Turn off the Coffee Machine by entering “off” to the prompt.
 
