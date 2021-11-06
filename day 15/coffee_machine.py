@@ -47,15 +47,7 @@ def clear():
 
 
 def make_coffee(coffee_type):
-    if coffee_type == "espresso":
-        # make espresso
-        pass
-    elif coffee_type == "latte":
-        # make latte
-        pass
-    elif coffee_type == "cappuccino":
-        # make cappuccino
-        pass
+    pass
 
 
 # TODO: 3. Print report.
