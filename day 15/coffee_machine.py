@@ -73,12 +73,14 @@ def run():
         print("Coffee Machine is now turned Off.")
     elif user_input == "report":
         print_report()
+        run()
     # If coffee name is in the MENU, then prepare it
     elif user_input in MENU.keys():
         # Check resources
         missing_resources = check_resources(user_input)
         if missing_resources:
             print(f"There's not enough of the following ingredients: {missing_resources}")
+            run()
         else:
             # Check if payment is OK
             payment_is_valid = process_payment(user_input)
@@ -88,8 +90,10 @@ def run():
                 print(f"Making your {user_input} ☕")
             else:
                 print("Sorry, that's not enough money, please try again.")
+            run()
     else:
         print("That's not a valid option!")
+        run()
 
 
 # TODO: 4. Check resources sufficient?
