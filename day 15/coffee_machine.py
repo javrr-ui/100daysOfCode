@@ -96,7 +96,7 @@ def run():
             else:
                 ingredient_string = missing_resources[0]
 
-            print(f"There's not enough {ingredient_string}")
+            print(f"Sorry, there's not enough {ingredient_string} to make your {user_input} 😢")
             run()
         else:
             # Check if payment is OK
