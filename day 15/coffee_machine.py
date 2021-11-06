@@ -98,9 +98,11 @@ def run():
                 print(f"Here is your {user_input}, enjoy! ☕")
             else:
                 print("Sorry, that's not enough money, please try again.")
+            press_enter()
             run()
     else:
         print("That's not a valid option!")
+        press_enter()
         run()
 
 
