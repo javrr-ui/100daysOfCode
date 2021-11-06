@@ -47,7 +47,9 @@ def clear():
 
 
 def make_coffee(coffee_type):
-    pass
+    # Iterate over each ingredient required for the coffee, and subtract to resources
+    for ingredient in MENU[coffee_type]["ingredients"]:
+        resources[ingredient] -= MENU[coffee_type]["ingredients"][ingredient]
 
 
 # TODO: 3. Print report.
