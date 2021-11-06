@@ -70,6 +70,7 @@ def print_report():
         print(f"{ingredient.capitalize()}: {ingredient_quantity} ")
     print("-------------------------")
     press_enter()
+    clear()
 
 
 # TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
