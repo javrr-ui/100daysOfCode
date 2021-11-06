@@ -31,14 +31,14 @@ resources = {
 }
 
 
-def make_coffee(type):
-    if type == "espresso":
+def make_coffee(coffee_type):
+    if coffee_type == "espresso":
         # make espresso
         pass
-    elif type == "latte":
+    elif coffee_type == "latte":
         # make latte
         pass
-    elif type == "cappuccino":
+    elif coffee_type == "cappuccino":
         # make cappuccino
         pass
 
