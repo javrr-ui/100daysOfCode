@@ -46,6 +46,7 @@ def make_coffee(coffee_type):
 # TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
 def run():
     user_input = input("What would you like? (espresso/latte/cappuccino): ")
+    # If coffee name is in the MENU, then prepare it
     if user_input in MENU.keys():
         make_coffee(user_input)
     else:
