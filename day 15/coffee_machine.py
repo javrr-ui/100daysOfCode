@@ -81,6 +81,7 @@ def string_beautify(ingredient_list):
             ingredient_string += string
     else:
         ingredient_string = ingredient_list[0]
+
     return ingredient_string
 
 
