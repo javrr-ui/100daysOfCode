@@ -66,7 +66,14 @@ def run():
         print_report()
     # If coffee name is in the MENU, then prepare it
     elif user_input in MENU.keys():
-        make_coffee(user_input)
+        # Check resources
+        missing_resources = check_resources(user_input)
+        if missing_resources:
+            print(f"There's not enough of the following ingredients: {missing_resources}")
+        else:
+            # make coffee
+            make_coffee(user_input)
+            print("making the coffee")
     else:
         print("That's not a valid option!")
 
