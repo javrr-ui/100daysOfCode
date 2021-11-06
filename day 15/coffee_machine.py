@@ -122,7 +122,14 @@ def process_payment(coffee_type):
         payment += user_coins * coins[coin]
     print("your bank is: ${0:.2f}".format(payment))
 
-    return math.isclose(payment, coffee_price) or payment > coffee_price
+    if math.isclose(payment, coffee_price):
+        # Add payment to machine bank
+        return True
+    elif payment > coffee_price:
+        #return change to user
+        return True
+    else:
+        return False
 
 # TODO: 6. Check transaction successful?
 
