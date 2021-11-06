@@ -73,7 +73,7 @@ def run():
         else:
             # make coffee
             make_coffee(user_input)
-            print("making the coffee")
+            print(f"Making your {user_input} ☕")
     else:
         print("That's not a valid option!")
 
