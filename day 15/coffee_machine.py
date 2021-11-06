@@ -100,4 +100,3 @@ def check_resources(coffee_type):
 # TODO: 7. Make Coffee.
 
 run()
-print(check_resources("latte"))
