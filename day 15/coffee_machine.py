@@ -89,7 +89,7 @@ def run():
             if payment_is_valid:
                 # make coffee
                 make_coffee(user_input)
-                print(f"Making your {user_input} ☕")
+                print(f"Here is your {user_input}, enjoy! ☕")
             else:
                 print("Sorry, that's not enough money, please try again.")
             run()
