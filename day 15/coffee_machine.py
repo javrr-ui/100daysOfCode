@@ -136,11 +136,11 @@ def process_payment(coffee_type):
         clear()
         print(f"Your {coffee_type} is ${coffee_price}")
         print("Please insert coins.")
-        print("your bank is: ${0:.2f}".format(payment))
-        user_coins = float(input(f"How many {coin}?"))
+        print("Your bank is: ${0:.2f}".format(payment))
+        user_coins = float(input(f"How many {coin}?: "))
         payment += user_coins * coins[coin]
     clear()
-    print("your bank is: ${0:.2f}".format(payment))
+    print("Your bank is: ${0:.2f}".format(payment))
 
     if math.isclose(payment, coffee_price):
         # Add payment to machine bank
