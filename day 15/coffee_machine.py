@@ -80,10 +80,14 @@ def run():
         if missing_resources:
             print(f"There's not enough of the following ingredients: {missing_resources}")
         else:
-            # make coffee
-            process_payment(user_input)
-            make_coffee(user_input)
-            print(f"Making your {user_input} ☕")
+            # Check if payment is OK
+            payment_is_valid = process_payment(user_input)
+            if payment_is_valid:
+                # make coffee
+                make_coffee(user_input)
+                print(f"Making your {user_input} ☕")
+            else:
+                print("Sorry, that's not enough money, please try again.")
     else:
         print("That's not a valid option!")
 
