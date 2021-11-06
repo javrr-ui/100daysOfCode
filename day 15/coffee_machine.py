@@ -43,6 +43,19 @@ def make_coffee(coffee_type):
         pass
 
 
+# TODO: 3. Print report.
+def print_report():
+    print("---- Resource report ----")
+    for ingredient in resources:
+        ingredient_quantity = str(resources[ingredient])
+        if ingredient == "water" or ingredient == "milk":
+            ingredient_quantity += "ml"
+        else:
+            ingredient_quantity += "gr"
+        print(f"{ingredient.capitalize()}: {ingredient_quantity} ")
+    print("-------------------------")
+
+
 # TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
 def run():
     user_input = input("What would you like? (espresso/latte/cappuccino): ")
@@ -55,8 +68,6 @@ def run():
     else:
         print("That's not a valid option!")
 
-
-# TODO: 3. Print report.
 
 # TODO: 4. Check resources sufficient?
 def check_resources(coffee_type):
