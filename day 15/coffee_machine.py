@@ -59,8 +59,10 @@ def print_report():
         ingredient_quantity = str(resources[ingredient])
         if ingredient == "water" or ingredient == "milk":
             ingredient_quantity += "ml"
-        else:
+        elif ingredient == "coffee":
             ingredient_quantity += "gr"
+        else:
+            ingredient_quantity = "$" + ingredient_quantity
         print(f"{ingredient.capitalize()}: {ingredient_quantity} ")
     print("-------------------------")
 
