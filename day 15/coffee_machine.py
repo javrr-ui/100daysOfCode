@@ -78,7 +78,7 @@ def string_beautify(ingredient_list):
     if len(ingredient_list) > 1:
         ingredient_list.insert(-1, " and ")
         for string in ingredient_list:
-            ingredient_string+= string
+            ingredient_string += string
     else:
         ingredient_string = ingredient_list[0]
     return ingredient_string
