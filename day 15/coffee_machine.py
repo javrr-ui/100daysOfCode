@@ -74,8 +74,14 @@ def print_report():
 
 
 def string_beautify(ingredient_list):
-    ingredient_string = ""
-    if len(ingredient_list) > 1:
+    """Receives a list of ingredients, returns a formatted string of ingredients"""
+    ingredient_string = "".join(ingredient_list)
+    if len(ingredient_list) > 2:
+        for ingredient in range(len(ingredient_list)-1):
+            ingredient_string = ingredient_string.replace(ingredient_list[ingredient], ingredient_list[ingredient]+", ")
+        ingredient_string = ingredient_string.replace(ingredient_list[-1], "and "+ingredient_list[-1])
+
+    elif len(ingredient_list) > 1:
         ingredient_list.insert(-1, " and ")
         for string in ingredient_list:
             ingredient_string += string
