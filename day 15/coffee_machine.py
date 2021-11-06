@@ -80,7 +80,7 @@ def check_resources(coffee_type):
     ingredient_list = []
     coffee = MENU[coffee_type]
     for ingredient in coffee["ingredients"]:
-        # Check if there's enough ingredient quantity to prepare the coffee
+        # Check if there's enough ingredient quantity to prepare the coffee, if not, add to list
         if not resources[ingredient] >= coffee["ingredients"][ingredient]:
             ingredient_list.append(ingredient)
     return ingredient_list
