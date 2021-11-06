@@ -129,9 +129,13 @@ def process_payment(coffee_type):
 
     if math.isclose(payment, coffee_price):
         # Add payment to machine bank
+        resources["money"] += payment
         return True
     elif payment > coffee_price:
         # Return change to user
+        resources["money"] += coffee_price
+        change = payment - coffee_price
+        print("Your change is: ${0:.2f}".format(change))
         return True
     else:
         return False
