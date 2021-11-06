@@ -62,7 +62,7 @@ def print_report():
         elif ingredient == "coffee":
             ingredient_quantity += "gr"
         else:
-            ingredient_quantity = "$" + ingredient_quantity
+            ingredient_quantity = "${0:.2f}".format(float(ingredient_quantity))
         print(f"{ingredient.capitalize()}: {ingredient_quantity} ")
     print("-------------------------")
 
