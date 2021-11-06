@@ -105,6 +105,7 @@ def check_resources(coffee_type):
 
 # TODO: 5. Process coins.
 def process_payment(coffee_type):
+    """Checks if user payment is equal or greater than coffee price, returns True of False"""
     # Show coffee price
     coffee_price = MENU[coffee_type]["cost"]
     print(f"Your {coffee_type} is ${coffee_price}")
@@ -116,6 +117,7 @@ def process_payment(coffee_type):
         payment += user_coins * coins[coin]
     print("your bank is: ${0:.2f}".format(payment))
 
+    return math.isclose(payment, coffee_price) or payment > coffee_price
 
 # TODO: 6. Check transaction successful?
 
