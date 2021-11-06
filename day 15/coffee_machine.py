@@ -73,6 +73,17 @@ def print_report():
     clear()
 
 
+def string_beautify(ingredient_list):
+    ingredient_string = ""
+    if len(ingredient_list) > 1:
+        ingredient_list.insert(-1, " and ")
+        for string in ingredient_list:
+            ingredient_string+= string
+    else:
+        ingredient_string = ingredient_list[0]
+    return ingredient_string
+
+
 # TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
 def run():
     user_input = input("What would you like? (espresso/latte/cappuccino): ")
@@ -88,14 +99,7 @@ def run():
         # Check resources
         missing_resources = check_resources(user_input)
         if missing_resources:
-            ingredient_string = ""
-            if len(missing_resources) > 1:
-                missing_resources.insert(-1, " and ")
-                for string in missing_resources:
-                    ingredient_string += string
-            else:
-                ingredient_string = missing_resources[0]
-
+            ingredient_string = string_beautify(missing_resources)
             print(f"Sorry, there's not enough {ingredient_string} to make your {user_input} 😢")
             run()
         else:
