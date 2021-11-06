@@ -108,9 +108,10 @@ def process_payment(coffee_type):
     print("Please insert coins.")
     payment = 0
     for coin in coins:
-        user_coins = input(f"How many {coin}?")
-
-
+        print("your bank is: ${0:.2f}".format(payment))
+        user_coins = float(input(f"How many {coin}?"))
+        payment += user_coins * coins[coin]
+    print("your bank is: ${0:.2f}".format(payment))
 
 # TODO: 6. Check transaction successful?
 
