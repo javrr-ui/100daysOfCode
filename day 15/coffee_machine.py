@@ -56,7 +56,6 @@ def make_coffee(coffee_type):
         resources[ingredient] -= MENU[coffee_type]["ingredients"][ingredient]
 
 
-# TODO: 3. Print report.
 def print_report():
     print("---- Resource report ----")
     for ingredient in resources:
@@ -91,7 +90,6 @@ def string_beautify(ingredient_list):
     return ingredient_string
 
 
-# TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
 def run():
     user_input = input("What would you like? (espresso/latte/cappuccino): ")
     # Turn off the coffee machine by entering "off"
@@ -128,7 +126,6 @@ def run():
         run()
 
 
-# TODO: 4. Check resources sufficient?
 def check_resources(coffee_type):
     """Returns an empty list if resources are sufficient, otherwise returns a list with
     ingredients with insufficient quantity
@@ -143,7 +140,6 @@ def check_resources(coffee_type):
     return ingredient_list
 
 
-# TODO: 5. Process coins.
 def process_payment(coffee_type):
     """Checks if user payment is equal or greater than coffee price, returns True of False"""
     # Show coffee price
@@ -174,8 +170,5 @@ def process_payment(coffee_type):
         return False
 
 
-# TODO: 6. Check transaction successful?
-
-# TODO: 7. Make Coffee.
 clear()
 run()
