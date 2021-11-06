@@ -73,6 +73,9 @@ def run():
 
 # TODO: 4. Check resources sufficient?
 def check_resources(coffee_type):
+    """Returns an empty list if resources are sufficient, otherwise returns a list with
+    ingredients with insufficient quantity
+    """
     # List used to store ingredients with not enough quantity
     ingredient_list = []
     coffee = MENU[coffee_type]
