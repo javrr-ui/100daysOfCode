@@ -72,6 +72,7 @@ def run():
             print(f"There's not enough of the following ingredients: {missing_resources}")
         else:
             # make coffee
+            process_payment(user_input)
             make_coffee(user_input)
             print(f"Making your {user_input} ☕")
     else:
