@@ -129,8 +129,7 @@ def process_payment(coffee_type):
     """Checks if user payment is equal or greater than coffee price, returns True of False"""
     # Show coffee price
     coffee_price = MENU[coffee_type]["cost"]
-    print(f"Your {coffee_type} is ${coffee_price}")
-    print("Please insert coins.")
+
     payment = 0
     for coin in coins:
         clear()
