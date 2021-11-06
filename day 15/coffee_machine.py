@@ -75,6 +75,7 @@ def run():
     if user_input == "off":
         print("Coffee Machine is now turned Off.")
     elif user_input == "report":
+        clear()
         print_report()
         run()
     # If coffee name is in the MENU, then prepare it
