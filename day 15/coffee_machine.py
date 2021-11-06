@@ -140,8 +140,9 @@ def process_payment(coffee_type):
     else:
         return False
 
+
 # TODO: 6. Check transaction successful?
 
 # TODO: 7. Make Coffee.
-
+clear()
 run()
