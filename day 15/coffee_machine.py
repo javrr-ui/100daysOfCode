@@ -126,7 +126,7 @@ def process_payment(coffee_type):
         # Add payment to machine bank
         return True
     elif payment > coffee_price:
-        #return change to user
+        # Return change to user
         return True
     else:
         return False
