@@ -56,8 +56,6 @@ def run():
         print("That's not a valid option!")
 
 
-# TODO: 2. Turn off the Coffee Machine by entering “off” to the prompt.
-
 # TODO: 3. Print report.
 
 # TODO: 4. Check resources sufficient?
