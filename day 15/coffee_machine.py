@@ -91,6 +91,7 @@ def run():
             run()
         else:
             # Check if payment is OK
+            clear()
             payment_is_valid = process_payment(user_input)
             if payment_is_valid:
                 # make coffee
