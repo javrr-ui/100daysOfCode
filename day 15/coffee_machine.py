@@ -105,6 +105,12 @@ def process_payment(coffee_type):
     # Show coffee price
     coffee_price = MENU[coffee_type]["cost"]
     print(f"Your {coffee_type} is ${coffee_price}")
+    print("Please insert coins.")
+    payment = 0
+    for coin in coins:
+        user_coins = input(f"How many {coin}?")
+
+
 
 # TODO: 6. Check transaction successful?
 
