@@ -37,6 +37,7 @@ coins = {
     "pennies": 0.01
 }
 
+
 def make_coffee(coffee_type):
     if coffee_type == "espresso":
         # make espresso
@@ -112,6 +113,7 @@ def process_payment(coffee_type):
         user_coins = float(input(f"How many {coin}?"))
         payment += user_coins * coins[coin]
     print("your bank is: ${0:.2f}".format(payment))
+
 
 # TODO: 6. Check transaction successful?
 
