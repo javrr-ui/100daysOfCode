@@ -62,6 +62,8 @@ def run():
     # Turn off the coffee machine by entering "off"
     if user_input == "off":
         print("Coffee Machine is now turned Off.")
+    elif user_input == "report":
+        print_report()
     # If coffee name is in the MENU, then prepare it
     elif user_input in MENU.keys():
         make_coffee(user_input)
