@@ -42,6 +42,10 @@ coins = {
 }
 
 
+def clear():
+    _ = system("cls")
+
+
 def make_coffee(coffee_type):
     if coffee_type == "espresso":
         # make espresso
