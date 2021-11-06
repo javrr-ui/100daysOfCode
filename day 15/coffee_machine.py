@@ -69,7 +69,7 @@ def print_report():
             ingredient_quantity = "${0:.2f}".format(float(ingredient_quantity))
         print(f"{ingredient.capitalize()}: {ingredient_quantity} ")
     print("-------------------------")
-    input("Press Enter to continue...")
+    press_enter()
 
 
 # TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
