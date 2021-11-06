@@ -46,6 +46,10 @@ def clear():
     _ = system("cls")
 
 
+def press_enter():
+    input("Press Enter to continue...")
+
+
 def make_coffee(coffee_type):
     # Iterate over each ingredient required for the coffee, and subtract to resources
     for ingredient in MENU[coffee_type]["ingredients"]:
