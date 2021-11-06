@@ -100,6 +100,7 @@ def run():
             else:
                 print("Sorry, that's not enough money, please try again.")
             press_enter()
+            clear()
             run()
     else:
         print("That's not a valid option!")
