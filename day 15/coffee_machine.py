@@ -88,7 +88,15 @@ def run():
         # Check resources
         missing_resources = check_resources(user_input)
         if missing_resources:
-            print(f"There's not enough of the following ingredients: {missing_resources}")
+            ingredient_string = ""
+            if len(missing_resources) > 1:
+                missing_resources.insert(-1, " and ")
+                for string in missing_resources:
+                    ingredient_string += string
+            else:
+                ingredient_string = missing_resources[0]
+
+            print(f"There's not enough {ingredient_string}")
             run()
         else:
             # Check if payment is OK
