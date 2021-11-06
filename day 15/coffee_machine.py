@@ -94,6 +94,10 @@ def check_resources(coffee_type):
 
 
 # TODO: 5. Process coins.
+def process_payment(coffee_type):
+    # Show coffee price
+    coffee_price = MENU[coffee_type]["cost"]
+    print(f"Your {coffee_type} is ${coffee_price}")
 
 # TODO: 6. Check transaction successful?
 
