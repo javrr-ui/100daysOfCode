@@ -19,7 +19,8 @@ def run():
         if drink:
             # Check resources
             if coffee_machine.is_resource_sufficient(drink):
-                print(f"{drink.name} can be made")
+                print(f"Your {drink.name} is ${drink.cost}")
+                payment_is_valid = money_machine.make_payment(drink.cost)
             else:
                 print("No")
             pass
