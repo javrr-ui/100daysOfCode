@@ -4,6 +4,7 @@ from money_machine import MoneyMachine
 
 menu = Menu()
 coffee_machine = CoffeeMaker()
+money_machine = MoneyMachine()
 
 
 def run():
