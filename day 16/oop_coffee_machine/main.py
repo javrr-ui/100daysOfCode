@@ -7,6 +7,8 @@ menu = Menu()
 
 def run():
     choice = input(f"What would you like? ({menu.get_items()}): ")
+    if choice == "off":
+        print("Coffee machine is now turned Off")
     run()
 
 
