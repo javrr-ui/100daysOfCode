@@ -16,6 +16,11 @@ def run():
     else:
         drink = menu.find_drink(choice)
         if drink:
+            # Check resources
+            if coffee_machine.is_resource_sufficient(drink):
+                print(f"{drink.name} can be made")
+            else:
+                print("No")
             pass
         run()
 
