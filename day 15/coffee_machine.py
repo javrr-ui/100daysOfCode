@@ -123,8 +123,10 @@ def run():
             clear()
             run()
     else:
+
         print("That's not a valid option!")
         press_enter()
+        clear()
         run()
 
 
