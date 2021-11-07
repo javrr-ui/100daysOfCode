@@ -24,9 +24,6 @@ def run():
                 payment_is_valid = money_machine.make_payment(drink.cost)
                 if payment_is_valid:
                     coffee_machine.make_coffee(drink)
-            else:
-                print("No")
-            pass
         run()
 
 
