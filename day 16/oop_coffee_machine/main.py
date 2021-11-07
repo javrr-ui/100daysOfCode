@@ -6,7 +6,7 @@ menu = Menu()
 
 
 def run():
-    choice = input("What would you like? (espresso/latte/cappuccino): ")
+    choice = input(f"What would you like? ({menu.get_items()}): ")
     run()
 
 
