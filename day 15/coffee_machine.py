@@ -105,6 +105,7 @@ def run():
         missing_resources = check_resources(user_input)
         if missing_resources:
             ingredient_string = string_beautify(missing_resources)
+            clear()
             print(f"Sorry, there's not enough {ingredient_string} to make your {user_input} 😢")
             run()
         else:
