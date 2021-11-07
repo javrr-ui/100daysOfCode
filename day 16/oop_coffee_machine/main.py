@@ -12,7 +12,8 @@ def run():
     if choice == "off":
         print("Coffee machine is now turned Off")
     elif choice == "report":
-        # Print report
+        coffee_machine.report()
+        money_machine.report()
         run()
     else:
         drink = menu.find_drink(choice)
