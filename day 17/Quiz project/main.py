@@ -10,3 +10,5 @@ for question in question_data:
 
     question_obj = Question(text, answer)
     question_bank.append(question_obj)
+
+quiz = QuizBrain(question_bank)
