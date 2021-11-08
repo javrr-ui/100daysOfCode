@@ -15,3 +15,11 @@ class User:
 user1 = User("001", "Javier")
 user2 = User("002", "Angela")
 print(user1.id, user1.username)
+
+user1.follow(user2)
+
+print(user1.followers)
+print(user1.following)
+
+print(user2.followers)
+print(user2.following)
