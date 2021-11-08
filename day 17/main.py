@@ -4,6 +4,7 @@ class User:
         print("user created")
         self.id = user_id
         self.username = username
+        self.followers = 0
 
 
 user1 = User("001", "Javier")
