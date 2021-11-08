@@ -13,4 +13,5 @@ class User:
 
 
 user1 = User("001", "Javier")
+user2 = User("002", "Angela")
 print(user1.id, user1.username)
