@@ -11,3 +11,10 @@ class QuizBrain:
 
     def still_has_questions(self):
         return self.question_number < len(self.question_list)
+
+    def check_answer(self, user_answer, correct_answer):
+        if user_answer.lower() == correct_answer.lower():
+            print("You're right!")
+        else:
+            print("You're wrong!")
+        print(f"The correct answer was: {correct_answer}")
