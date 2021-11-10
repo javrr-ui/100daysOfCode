@@ -31,9 +31,14 @@ def set_random_color(turtle_obj):
 turtle = Turtle()
 turtle.shape("turtle")
 turtle.color("black", "green")
-for sides in range(3, 11):
-    draw_figure(turtle, sides)
+# Turtle Challenge 3
+# for sides in range(3, 11):
+#     draw_figure(turtle, sides)
 
+# Turtle Challenge 2
+# draw_dashed_line(turtle)
+
+# Turtle Challenge 1
 # draw_square(turtle)
 # draw_dashed_line(turtle)
 screen = Screen()
