@@ -42,6 +42,11 @@ def random_walk(turtle_obj):
         turtle_obj.backward(30)
 
 
+def draw_circle(turtle_obj, radius, heading_angle):
+    turtle_obj.circle(radius)
+    turtle_obj.setheading(heading_angle)
+
+
 turtle = Turtle()
 turtle.shape("turtle")
 turtle.color("black", "green")
