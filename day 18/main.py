@@ -50,6 +50,7 @@ def draw_circle(turtle_obj, radius, heading_angle):
 turtle = Turtle()
 turtle.shape("turtle")
 turtle.color("black", "green")
+turtle.speed(0)
 # Turtle Challenge 4
 turtle.pensize(10)
 while True:
