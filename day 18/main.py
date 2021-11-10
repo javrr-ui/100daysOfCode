@@ -51,6 +51,11 @@ turtle = Turtle()
 turtle.shape("turtle")
 turtle.color("black", "green")
 turtle.speed(0)
+# Turtle Challenge 5
+for angle in range(0, 361, 8):
+    set_random_color(turtle)
+    draw_circle(turtle, 100, angle)
+
 # Turtle Challenge 4
 # turtle.pensize(10)
 # while True:
