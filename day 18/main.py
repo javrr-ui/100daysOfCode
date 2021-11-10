@@ -28,6 +28,20 @@ def set_random_color(turtle_obj):
     turtle_obj.pencolor(random.random(), random.random(), random.random())
 
 
+def random_walk(turtle_obj):
+    direction = random.randint(1, 4)
+    if direction == 1:
+        turtle_obj.forward(30)
+    elif direction == 2:
+        turtle_obj.left(90)
+        turtle_obj.forward(30)
+    elif direction == 3:
+        turtle_obj.right(90)
+        turtle_obj.forward(30)
+    elif direction == 4:
+        turtle_obj.backward(30)
+
+
 turtle = Turtle()
 turtle.shape("turtle")
 turtle.color("black", "green")
