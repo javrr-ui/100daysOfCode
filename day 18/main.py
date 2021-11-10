@@ -45,6 +45,11 @@ def random_walk(turtle_obj):
 turtle = Turtle()
 turtle.shape("turtle")
 turtle.color("black", "green")
+# Turtle Challenge 4
+turtle.pensize(10)
+while True:
+    random_walk(turtle)
+
 # Turtle Challenge 3
 # for sides in range(3, 11):
 #     draw_figure(turtle, sides)
