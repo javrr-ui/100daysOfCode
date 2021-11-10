@@ -16,6 +16,10 @@ def draw_dashed_line(turtle_obj):
         turtle_obj.pendown()
 
 
+def set_random_color(turtle_obj):
+    turtle_obj.pencolor(random.random(), random.random(), random.random())
+
+
 turtle = Turtle()
 turtle.shape("turtle")
 turtle.color("black", "green")
