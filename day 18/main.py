@@ -52,10 +52,10 @@ turtle.shape("turtle")
 turtle.color("black", "green")
 turtle.speed(0)
 # Turtle Challenge 4
-turtle.pensize(10)
-while True:
-    set_random_color(turtle)
-    random_walk(turtle)
+# turtle.pensize(10)
+# while True:
+#     set_random_color(turtle)
+#     random_walk(turtle)
 
 # Turtle Challenge 3
 # for sides in range(3, 11):
