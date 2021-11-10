@@ -1,4 +1,5 @@
 from turtle import Turtle, Screen
+import random
 
 
 def draw_square(turtle_obj):
