@@ -40,7 +40,7 @@ turtle.color("black", "green")
 
 # Turtle Challenge 1
 # draw_square(turtle)
-# draw_dashed_line(turtle)
+
 screen = Screen()
 screen.colormode(1)
 screen.exitonclick()
