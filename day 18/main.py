@@ -48,6 +48,7 @@ turtle.color("black", "green")
 # Turtle Challenge 4
 turtle.pensize(10)
 while True:
+    set_random_color(turtle)
     random_walk(turtle)
 
 # Turtle Challenge 3
