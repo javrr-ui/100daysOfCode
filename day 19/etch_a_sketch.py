@@ -13,7 +13,7 @@ def move_backward():
 
 
 def rotate_clockwise():
-    pass
+    turtle.setheading(turtle.heading() - 10)
 
 
 def rotate_counterclockwise():
