@@ -17,7 +17,7 @@ def rotate_clockwise():
 
 
 def rotate_counterclockwise():
-    pass
+    turtle.setheading(turtle.heading() + 10)
 
 
 def clear_screen():
