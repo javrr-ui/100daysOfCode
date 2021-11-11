@@ -21,7 +21,7 @@ def rotate_counterclockwise():
 
 
 def clear_screen():
-    pass
+    turtle.reset()
 
 
 screen.listen()
@@ -29,4 +29,5 @@ screen.onkey(fun=move_forward, key="w")
 screen.onkey(fun=move_backward, key="s")
 screen.onkey(fun=rotate_counterclockwise, key="a")
 screen.onkey(fun=rotate_clockwise, key="d")
+screen.onkey(fun=clear_screen, key="c")
 screen.exitonclick()
