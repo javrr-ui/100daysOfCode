@@ -9,7 +9,7 @@ def move_forward():
 
 
 def move_backward():
-    pass
+    turtle.backward(10)
 
 
 def rotate_clockwise():
