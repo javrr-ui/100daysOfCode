@@ -5,7 +5,7 @@ screen = Screen()
 
 
 def move_forward():
-    pass
+    turtle.forward(10)
 
 
 def move_backward():
