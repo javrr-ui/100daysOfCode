@@ -19,4 +19,9 @@ for color in colors:
 if user_bet:
     is_race_on = True
 
+while is_race_on:
+    for turtle in turtles:
+        rand_distance = random.randint(0, 10)
+        turtle.forward(rand_distance)
+
 screen.exitonclick()
