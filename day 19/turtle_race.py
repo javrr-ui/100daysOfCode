@@ -13,6 +13,7 @@ for color in colors:
     turtle.penup()
     turtle.goto(-280, y_pos)
     y_pos += 50
+    turtles.append(turtle)
 
 
 screen.exitonclick()
