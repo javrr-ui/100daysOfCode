@@ -32,4 +32,5 @@ while is_race_on:
                 print(f"You've lost! The {turtle.fillcolor()} turtle is the Winner")
             break
 
+
 screen.exitonclick()
