@@ -26,6 +26,10 @@ while is_race_on:
 
         if turtle.xcor() >= (screen.window_width() / 2) - 30:
             is_race_on = False
+            if turtle.fillcolor() == user_bet:
+                print(f"You've won! The {turtle.fillcolor()} turtle is the Winner")
+            else:
+                print(f"You've lost! The {turtle.fillcolor()} turtle is the Winner")
             break
 
 screen.exitonclick()
