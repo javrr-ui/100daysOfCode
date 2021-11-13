@@ -24,4 +24,8 @@ while is_race_on:
         rand_distance = random.randint(0, 10)
         turtle.forward(rand_distance)
 
+        if turtle.xcor() >= (screen.window_width() / 2) - 30:
+            is_race_on = False
+            break
+
 screen.exitonclick()
