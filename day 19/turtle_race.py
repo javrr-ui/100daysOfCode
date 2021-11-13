@@ -16,5 +16,7 @@ for color in colors:
     y_pos += 50
     turtles.append(turtle)
 
+if user_bet:
+    is_race_on = True
 
 screen.exitonclick()
