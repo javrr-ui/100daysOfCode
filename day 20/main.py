@@ -19,6 +19,7 @@ def build_snake():
         snake_segment.setx(x_coord)
         snake_segment.color("white")
         x_coord -= 20
+        snake.append(snake_segment)
     screen.update()
 
 
