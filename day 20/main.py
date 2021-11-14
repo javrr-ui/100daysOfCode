@@ -23,5 +23,11 @@ def build_snake():
     screen.update()
 
 
-snake()
+build_snake()
+while True:
+    screen.update()
+    for segment in snake:
+        segment.forward(20)
+    time.sleep(0.1)
+
 screen.exitonclick()
