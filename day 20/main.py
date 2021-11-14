@@ -15,16 +15,16 @@ class Snake:
         self.y_pos = y_pos
         self.snake_body = []
 
-def build_snake():
-    x_coord = 0
-    for i in range(3):
-        snake_segment = Turtle("square")
-        snake_segment.penup()
-        snake_segment.setx(x_coord)
-        snake_segment.color("white")
-        x_coord -= 20
-        snake.append(snake_segment)
-    screen.update()
+    def build_snake(self, size):
+        x_coord = self.x_pos
+        for i in range(size):
+            snake_segment = Turtle("square")
+            snake_segment.penup()
+            snake_segment.setx(x_coord)
+            snake_segment.color("white")
+            x_coord -= 20
+            self.snake_body.append(snake_segment)
+        screen.update()
 
 
 build_snake()
