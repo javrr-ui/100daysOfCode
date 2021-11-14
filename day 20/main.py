@@ -1,3 +1,4 @@
+import turtle
 from turtle import Turtle, Screen
 
 screen = Screen()
@@ -16,4 +17,5 @@ def snake():
         x_coord -= 20
 
 
+snake()
 screen.exitonclick()
