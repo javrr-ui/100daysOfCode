@@ -58,8 +58,12 @@ snake.build_snake(3)
 
 while True:
     screen.update()
-    snake.right()
-    time.sleep(1)
+    screen.onkey(snake.right, "d")
+    screen.onkey(snake.up, "w")
+    screen.onkey(snake.left, "a")
+    screen.onkey(snake.down, "s")
+    # time.sleep(1)
+
 
 
 screen.exitonclick()
