@@ -7,7 +7,7 @@ screen.setup(600, 600)
 screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
-
+screen.listen()
 
 class Snake:
     def __init__(self, x_pos, y_pos):
