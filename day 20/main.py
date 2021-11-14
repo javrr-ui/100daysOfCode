@@ -48,7 +48,10 @@ class Snake:
 
 snake = Snake(0, 0)
 snake.build_snake(3)
-
+screen.onkey(snake.right, "d")
+screen.onkey(snake.up, "w")
+screen.onkey(snake.left, "a")
+screen.onkey(snake.down, "s")
 while True:
     screen.update()
     screen.onkey(snake.right, "d")
