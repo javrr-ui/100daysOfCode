@@ -27,24 +27,16 @@ class Snake:
         screen.update()
 
     def left(self):
-        self.rearrange_body()
         self.snake_body[0].setheading(180)
-        self.snake_body[0].forward(20)
 
     def right(self):
-        self.rearrange_body()
         self.snake_body[0].setheading(0)
-        self.snake_body[0].forward(20)
 
     def up(self):
-        self.rearrange_body()
         self.snake_body[0].setheading(90)
-        self.snake_body[0].forward(20)
 
     def down(self):
-        self.rearrange_body()
         self.snake_body[0].setheading(270)
-        self.snake_body[0].forward(20)
 
     def rearrange_body(self):
         for segment in range(len(self.snake_body)-1, 0, -1):
