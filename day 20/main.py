@@ -43,6 +43,7 @@ class Snake:
             x = self.snake_body[segment - 1].xcor()
             y = self.snake_body[segment - 1].ycor()
             self.snake_body[segment].goto(x, y)
+        self.snake_body[0].forward(20)
 
 
 snake = Snake(0, 0)
