@@ -49,8 +49,8 @@ snake.build_snake(3)
 
 while True:
     screen.update()
-    for segment in snake:
-        segment.forward(20)
-    time.sleep(0.1)
+    snake.right()
+    time.sleep(1)
+
 
 screen.exitonclick()
