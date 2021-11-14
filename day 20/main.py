@@ -26,6 +26,11 @@ class Snake:
             self.snake_body.append(snake_segment)
         screen.update()
 
+    def left(self):
+        self.rearrange_body()
+        self.snake_body[0].setheading(180)
+        self.snake_body[0].forward(20)
+
     def right(self):
         self.rearrange_body()
         self.snake_body[0].setheading(0)
