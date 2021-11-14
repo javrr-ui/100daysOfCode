@@ -8,6 +8,7 @@ screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
 
+snake = []
 
 def snake():
     x_coord = 0
