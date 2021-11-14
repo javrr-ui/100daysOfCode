@@ -54,12 +54,8 @@ screen.onkey(snake.left, "a")
 screen.onkey(snake.down, "s")
 while True:
     screen.update()
-    screen.onkey(snake.right, "d")
-    screen.onkey(snake.up, "w")
-    screen.onkey(snake.left, "a")
-    screen.onkey(snake.down, "s")
-    # time.sleep(1)
-
+    snake.move()
+    time.sleep(0.1)
 
 
 screen.exitonclick()
