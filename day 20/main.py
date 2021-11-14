@@ -36,7 +36,17 @@ class Snake:
         self.snake_body[0].forward(20)
         self.snake_body[0].setheading(90)
 
-build_snake()
+
+    def rearrange_body(self):
+        for segment in range(len(self.snake_body)-1, 0, -1):
+            x = self.snake_body[segment - 1].xcor()
+            y = self.snake_body[segment - 1].ycor()
+            self.snake_body[segment].goto(x, y)
+
+
+snake = Snake(0, 0)
+snake.build_snake(3)
+
 while True:
     screen.update()
     for segment in snake:
