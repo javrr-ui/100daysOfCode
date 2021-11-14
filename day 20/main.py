@@ -8,7 +8,6 @@ screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
 
-snake = []
 
 class Snake:
     def __init__(self, x_pos, y_pos):
