@@ -10,7 +10,8 @@ screen.tracer(0)
 
 snake = []
 
-def snake():
+
+def build_snake():
     x_coord = 0
     for i in range(3):
         snake_segment = Turtle("square")
