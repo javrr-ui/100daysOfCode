@@ -38,7 +38,7 @@ class Snake:
     def down(self):
         self.snake_body[0].setheading(270)
 
-    def rearrange_body(self):
+    def move(self):
         for segment in range(len(self.snake_body)-1, 0, -1):
             x = self.snake_body[segment - 1].xcor()
             y = self.snake_body[segment - 1].ycor()
