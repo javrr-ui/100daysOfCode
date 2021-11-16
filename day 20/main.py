@@ -8,6 +8,11 @@ screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
 screen.listen()
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
+
 
 class Snake:
     def __init__(self, x_pos, y_pos):
