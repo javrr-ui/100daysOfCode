@@ -32,16 +32,16 @@ class Snake:
         screen.update()
 
     def left(self):
-        self.snake_body[0].setheading(180)
+        self.snake_body[0].setheading(LEFT)
 
     def right(self):
-        self.snake_body[0].setheading(0)
+        self.snake_body[0].setheading(RIGHT)
 
     def up(self):
-        self.snake_body[0].setheading(90)
+        self.snake_body[0].setheading(UP)
 
     def down(self):
-        self.snake_body[0].setheading(270)
+        self.snake_body[0].setheading(DOWN)
 
     def move(self):
         for segment in range(len(self.snake_body)-1, 0, -1):
@@ -52,7 +52,7 @@ class Snake:
 
 
 snake = Snake(0, 0)
-snake.build_snake(3)
+snake.build_snake(8)
 screen.onkey(snake.right, "d")
 screen.onkey(snake.up, "w")
 screen.onkey(snake.left, "a")
@@ -60,7 +60,7 @@ screen.onkey(snake.down, "s")
 while True:
     screen.update()
     snake.move()
-    time.sleep(0.1)
+    time.sleep(0.05)
 
 
 screen.exitonclick()
