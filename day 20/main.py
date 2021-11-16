@@ -32,16 +32,20 @@ class Snake:
         screen.update()
 
     def left(self):
-        self.snake_body[0].setheading(LEFT)
+        if self.snake_body[0].heading() != RIGHT:
+            self.snake_body[0].setheading(LEFT)
 
     def right(self):
-        self.snake_body[0].setheading(RIGHT)
+        if self.snake_body[0].heading() != LEFT:
+            self.snake_body[0].setheading(RIGHT)
 
     def up(self):
-        self.snake_body[0].setheading(UP)
+        if self.snake_body[0].heading() != DOWN:
+            self.snake_body[0].setheading(UP)
 
     def down(self):
-        self.snake_body[0].setheading(DOWN)
+        if self.snake_body[0].heading() != UP:
+            self.snake_body[0].setheading(DOWN)
 
     def move(self):
         for segment in range(len(self.snake_body)-1, 0, -1):
