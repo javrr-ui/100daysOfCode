@@ -56,7 +56,7 @@ class Snake:
 
 
 snake = Snake(0, 0)
-snake.build_snake(8)
+snake.build_snake(3)
 screen.onkey(snake.right, "d")
 screen.onkey(snake.up, "w")
 screen.onkey(snake.left, "a")
