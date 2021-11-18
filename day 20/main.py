@@ -55,6 +55,7 @@ class Snake:
         self.snake_body[0].forward(20)
 
 
+food = Food()
 snake = Snake(0, 0)
 snake.build_snake(3)
 screen.onkey(snake.right, "d")
