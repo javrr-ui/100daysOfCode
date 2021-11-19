@@ -1,6 +1,7 @@
 from turtle import Screen
 import time
 from food import Food
+from snake import Snake
 
 screen = Screen()
 screen.setup(600, 600)
