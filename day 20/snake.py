@@ -36,3 +36,14 @@ class Snake:
     def up(self):
         if self.snake_body[0].heading() != DOWN:
             self.snake_body[0].setheading(UP)
+
+    def down(self):
+        if self.snake_body[0].heading() != UP:
+            self.snake_body[0].setheading(DOWN)
+
+    def move(self):
+        for segment in range(len(self.snake_body)-1, 0, -1):
+            x = self.snake_body[segment - 1].xcor()
+            y = self.snake_body[segment - 1].ycor()
+            self.snake_body[segment].goto(x, y)
+        self.snake_body[0].forward(20)
