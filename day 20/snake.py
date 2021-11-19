@@ -13,7 +13,7 @@ class Snake:
         self.y_pos = y_pos
         self.snake_body = []
         self.build_snake(3)
-        self.snake_head = self.snake_body[0]
+        self.head = self.snake_body[0]
 
     def build_snake(self, size):
         x_coord = self.x_pos
