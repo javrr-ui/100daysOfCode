@@ -65,8 +65,8 @@ screen.onkey(snake.left, "a")
 screen.onkey(snake.down, "s")
 while True:
     screen.update()
+    time.sleep(0.10)
     snake.move()
-    time.sleep(0.05)
 
 
 screen.exitonclick()
