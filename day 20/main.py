@@ -11,7 +11,7 @@ screen.title("Snake Game")
 screen.tracer(0)
 screen.listen()
 
-
+scoreboard = Scoreboard()
 food = Food()
 snake = Snake(0, 0)
 screen.onkey(snake.right, "d")
