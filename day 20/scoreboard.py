@@ -7,4 +7,4 @@ class Scoreboard(Turtle):
         self.scoreboard = Turtle()
         self.scoreboard.color("white")
         self.scoreboard.hideturtle()
-        self.scoreboard.write("Score: 0", False, align="center")
+        self.scoreboard.write(f"Score: {self.score}", False, align="center")
