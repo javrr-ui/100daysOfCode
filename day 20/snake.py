@@ -26,6 +26,14 @@ class Snake:
             self.snake_body.append(snake_segment)
         screen.update()
 
+    def lengthen(self):
+        snake_segment = Turtle("square")
+        snake_segment.penup()
+        snake_segment.setx(self.snake_body[-1].xcor())
+        snake_segment.sety(self.snake_body[-1].ycor())
+        snake_segment.color("white")
+        self.snake_body.append(snake_segment)
+
     def left(self):
         if self.snake_body[0].heading() != RIGHT:
             self.snake_body[0].setheading(LEFT)
