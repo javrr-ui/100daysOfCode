@@ -23,6 +23,7 @@ while True:
     time.sleep(0.10)
     snake.move()
     if snake.head.distance(food) < 15:
+        snake.lengthen_snake()
         food.refresh()
         scoreboard.add_point()
 
