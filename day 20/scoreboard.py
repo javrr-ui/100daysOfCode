@@ -7,6 +7,7 @@ class Scoreboard(Turtle):
         self.scoreboard = Turtle()
         self.scoreboard.color("white")
         self.scoreboard.hideturtle()
+        self.scoreboard.goto(0, 260)
         self.update_score()
 
     def add_point(self):
