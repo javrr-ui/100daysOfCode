@@ -11,3 +11,7 @@ class Scoreboard(Turtle):
 
     def add_point(self):
         self.score += 1
+
+    def update_score(self):
+        self.scoreboard.clear()
+        self.scoreboard.write(f"Score: {self.score}", False, align="center", font=('Arial', 20, 'normal'))
