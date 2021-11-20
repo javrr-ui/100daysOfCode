@@ -24,5 +24,6 @@ while True:
     snake.move()
     if snake.head.distance(food) < 15:
         food.refresh()
+        scoreboard.add_point()
 
 screen.exitonclick()
