@@ -11,6 +11,7 @@ class Scoreboard(Turtle):
 
     def add_point(self):
         self.score += 1
+        self.update_score()
 
     def update_score(self):
         self.scoreboard.clear()
