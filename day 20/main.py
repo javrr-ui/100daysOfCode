@@ -27,4 +27,9 @@ while True:
         food.refresh()
         scoreboard.add_point()
 
+    if snake.head.xcor() >= 300 or snake.head.xcor() <= -300:
+        print("You lose!")
+        print(f"Final score: {scoreboard.score}")
+        break
+
 screen.exitonclick()
