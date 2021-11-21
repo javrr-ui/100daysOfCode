@@ -32,12 +32,12 @@ while game_is_on:
         scoreboard.game_over()
         print("You lose!")
         print(f"Final score: {scoreboard.score}")
-        break
+        game_is_on = False
 
     if snake.head.ycor() >= 300 or snake.head.ycor() <= -300:
         scoreboard.game_over()
         print("You lose!")
         print(f"Final score: {scoreboard.score}")
-        break
+        game_is_on = False
 
 screen.exitonclick()
