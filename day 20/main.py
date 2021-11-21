@@ -28,11 +28,13 @@ while True:
         scoreboard.add_point()
 
     if snake.head.xcor() >= 300 or snake.head.xcor() <= -300:
+        scoreboard.game_over()
         print("You lose!")
         print(f"Final score: {scoreboard.score}")
         break
 
     if snake.head.ycor() >= 300 or snake.head.ycor() <= -300:
+        scoreboard.game_over()
         print("You lose!")
         print(f"Final score: {scoreboard.score}")
         break
