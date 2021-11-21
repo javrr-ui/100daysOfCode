@@ -32,4 +32,9 @@ while True:
         print(f"Final score: {scoreboard.score}")
         break
 
+    if snake.head.ycor() >= 300 or snake.head.ycor() <= -300:
+        print("You lose!")
+        print(f"Final score: {scoreboard.score}")
+        break
+
 screen.exitonclick()
