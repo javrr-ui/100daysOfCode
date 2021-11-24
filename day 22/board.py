@@ -2,15 +2,6 @@ from turtle import Turtle, Screen
 
 
 class Board:
-    def __init__(self):
-        self.screen = Screen()
-        self.screen.setup(1000, 600)
-        self.screen.bgcolor("black")
-        self.screen.tracer(0)
-        self.dashed_line()
-        self.screen.update()
-        self.screen.exitonclick()
-
     def dashed_line(self):
 
         for i in range(0, self.screen.window_height(), int(self.screen.window_height()/6)):
