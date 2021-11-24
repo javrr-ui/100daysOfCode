@@ -6,7 +6,9 @@ class Board:
         self.screen = Screen()
         self.screen.setup(1000, 600)
         self.screen.bgcolor("black")
+        self.screen.tracer(0)
         self.dashed_line()
+        self.screen.update()
         self.screen.exitonclick()
 
     def dashed_line(self):
