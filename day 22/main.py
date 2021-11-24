@@ -1,8 +1,8 @@
 from turtle import Turtle, Screen
 
 
-def dashed_line(self):
-    for i in range(0, self.screen.window_height(), int(self.screen.window_height() / 6)):
+def dashed_line(screen):
+    for i in range(0, screen.window_height(), int(screen.window_height() / 10)):
         dashed_line = Turtle("square")
         dashed_line.color("white")
         dashed_line.shapesize(stretch_len=3)
