@@ -8,7 +8,7 @@ def dashed_line(screen):
         dashed_line.shapesize(stretch_len=2, stretch_wid=0.20)
         dashed_line.penup()
         dashed_line.tilt(90)
-        dashed_line.goto(0, int(self.screen.window_height() / 2) - (i * 1.20))
+        dashed_line.goto(0, int(screen.window_height() / 2) - (i * 1.20))
 
 
 screen = Screen()
