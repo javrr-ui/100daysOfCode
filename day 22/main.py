@@ -23,7 +23,8 @@ class Paddle(Turtle):
         self.goto(-450, 0)
 
     def up(self):
-        self.sety(self.ycor()+5)
+        if self.screen.window_height() / 2 > self.ycor()+50:
+            self.sety(self.ycor()+5)
 
     def down(self):
         self.sety(self.ycor()-5)
