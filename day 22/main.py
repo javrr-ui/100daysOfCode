@@ -37,6 +37,7 @@ dashed_line(screen)
 pad = Paddle()
 while True:
     screen.onkeypress(pad.up, "w")
+    screen.onkeypress(pad.down, "s")
     screen.update()
 screen.update()
 screen.exitonclick()
