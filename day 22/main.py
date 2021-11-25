@@ -21,6 +21,7 @@ class Paddle(Turtle):
         self.penup()
         self.tilt(90)
         self.goto(-450, 0)
+        self.speed = 0
 
     def up(self):
         if self.screen.window_height() / 2 > self.ycor()+50:
