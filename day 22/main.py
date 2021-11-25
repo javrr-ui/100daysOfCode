@@ -24,6 +24,9 @@ class Paddle(Turtle):
     def up(self):
         self.sety(self.ycor()+5)
 
+    def down(self):
+        self.sety(self.ycor()-5)
+
 
 screen = Screen()
 screen.setup(1000, 600)
