@@ -31,6 +31,8 @@ class Paddle(Turtle):
         if (self.screen.window_height()*-1 / 2) < self.ycor() - 60:
             self.sety(self.ycor()-5)
 
+    def set_speed(self, speed):
+        self.speed = speed
 
 screen = Screen()
 screen.setup(1000, 600)
