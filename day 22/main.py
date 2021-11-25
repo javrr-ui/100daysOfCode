@@ -25,11 +25,11 @@ class Paddle(Turtle):
 
     def up(self):
         if self.screen.window_height() / 2 > self.ycor()+50:
-            self.sety(self.ycor()+5)
+            self.sety(self.ycor() + self.speed)
 
     def down(self):
         if (self.screen.window_height()*-1 / 2) < self.ycor() - 60:
-            self.sety(self.ycor()-5)
+            self.sety(self.ycor() - self.speed)
 
     def set_speed(self, speed):
         self.speed = speed
