@@ -12,7 +12,7 @@ def dashed_line(screen):
 
 
 class Paddle(Turtle):
-    def __init__(self):
+    def __init__(self, screen):
         super().__init__()
         self.shape("square")
         self.color("white")
