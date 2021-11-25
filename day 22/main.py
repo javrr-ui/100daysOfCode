@@ -27,7 +27,8 @@ class Paddle(Turtle):
             self.sety(self.ycor()+5)
 
     def down(self):
-        self.sety(self.ycor()-5)
+        if (self.screen.window_height()*-1 / 2) < self.ycor() - 60:
+            self.sety(self.ycor()-5)
 
 
 screen = Screen()
