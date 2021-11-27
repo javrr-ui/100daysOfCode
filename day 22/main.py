@@ -24,7 +24,7 @@ l_paddle = Paddle(screen, x_pos=-450, y_pos=0)
 l_paddle.set_speed(20)
 r_paddle = Paddle(screen, x_pos=450, y_pos=0)
 r_paddle.set_speed(20)
-ball = Ball()
+ball = Ball(screen)
 
 while True:
     time.sleep(0.02)
