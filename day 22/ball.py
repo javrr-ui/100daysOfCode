@@ -19,4 +19,18 @@ class Ball(Turtle):
     positive_y = True
 
     def move(self):
-        self.goto(self.xcor()+10, self.ycor()+10)
+        if self.ycor() <= self.upper_limit and self.positive_y:
+            self.sety(self.ycor() + 10)
+        else:
+            self.positive_y = False
+            self.sety(self.ycor() - 10)
+            if self.ycor() <= self.lower_limit:
+                self.positive_y = True
+
+        if self.xcor() <= self.right_limit and self.positive_x:
+            self.setx(self.xcor() + 10)
+        else:
+            self.positive_x = False
+            self.setx(self.xcor() - 10)
+            if self.xcor() <= self.left_limit:
+                self.positive_x = True
