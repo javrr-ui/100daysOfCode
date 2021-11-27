@@ -2,6 +2,7 @@ from turtle import Turtle, Screen
 from paddle import Paddle
 from ball import Ball
 
+
 def dashed_line(screen):
     for i in range(0, screen.window_height(), int(screen.window_height() / 10)):
         line = Turtle("square")
