@@ -23,6 +23,8 @@ l_paddle = Paddle(screen, x_pos=-450, y_pos=0)
 l_paddle.set_speed(20)
 r_paddle = Paddle(screen, x_pos=450, y_pos=0)
 r_paddle.set_speed(20)
+ball = Ball()
+
 while True:
     screen.onkeypress(l_paddle.up, "w")
     screen.onkeypress(l_paddle.down, "s")
