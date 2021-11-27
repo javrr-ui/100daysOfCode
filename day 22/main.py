@@ -18,7 +18,7 @@ screen.bgcolor("black")
 screen.tracer(0)
 screen.listen()
 dashed_line(screen)
-pad = Paddle(screen)
+pad = Paddle(screen, x_pos=-450, y_pos=0)
 pad.set_speed(20)
 while True:
     screen.onkeypress(pad.up, "w")
