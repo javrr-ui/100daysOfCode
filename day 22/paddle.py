@@ -2,7 +2,7 @@ from turtle import Turtle
 
 
 class Paddle(Turtle):
-    def __init__(self, screen):
+    def __init__(self, screen, x_pos, y_pos):
         super().__init__()
         self.screen = screen
         self.shape("square")
@@ -12,6 +12,8 @@ class Paddle(Turtle):
         self.tilt(90)
         self.goto(-450, 0)
         self.speed = 0
+        self.x_pos = x_pos
+        self.y_pos = y_pos
 
     def up(self):
         if self.screen.window_height() / 2 > self.ycor() + 55:
