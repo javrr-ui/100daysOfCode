@@ -28,6 +28,7 @@ ball = Ball()
 while True:
     screen.onkeypress(l_paddle.up, "w")
     screen.onkeypress(l_paddle.down, "s")
+    ball.move()
     screen.update()
 screen.update()
 screen.exitonclick()
