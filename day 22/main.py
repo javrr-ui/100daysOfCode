@@ -27,6 +27,7 @@ r_paddle.set_speed(20)
 ball = Ball()
 
 while True:
+    time.sleep(0.02)
     screen.onkeypress(l_paddle.up, "w")
     screen.onkeypress(l_paddle.down, "s")
     ball.move()
