@@ -7,3 +7,4 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.penup()
+        self.goto(0, 0)
