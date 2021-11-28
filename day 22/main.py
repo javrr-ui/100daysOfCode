@@ -37,5 +37,8 @@ while True:
     if ball.distance(l_paddle) < 50 and ball.xcor() < -420:
         ball.positive_x = True
 
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 420:
+        ball.positive_x = False
+
     screen.update()
 screen.exitonclick()
