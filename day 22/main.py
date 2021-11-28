@@ -28,6 +28,8 @@ ball = Ball(screen)
 
 screen.onkeypress(l_paddle.up, "w")
 screen.onkeypress(l_paddle.down, "s")
+screen.onkeypress(r_paddle.up, "Up")
+screen.onkeypress(r_paddle.down, "Down")
 
 while True:
     time.sleep(0.02)
