@@ -15,8 +15,8 @@ class Ball(Turtle):
         self.left_limit = self.screen.window_width() / 2 * -1 + 10  # +10 pixel gap
         self.right_limit = self.screen.window_width() / 2 - 30  # 30 pixel gap
 
-    positive_x = True
-    positive_y = True
+        self.positive_x = True
+        self.positive_y = True
 
     def move(self):
         if self.ycor() <= self.upper_limit and self.positive_y:
