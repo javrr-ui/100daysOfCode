@@ -36,5 +36,4 @@ while True:
         ball.positive_x = True
 
     screen.update()
-screen.update()
 screen.exitonclick()
