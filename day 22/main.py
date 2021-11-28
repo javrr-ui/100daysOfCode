@@ -31,7 +31,7 @@ while True:
     screen.onkeypress(l_paddle.up, "w")
     screen.onkeypress(l_paddle.down, "s")
     ball.move()
-    if ball.distance(l_paddle) < 50 and ball.xcor() < -430:
+    if ball.distance(l_paddle) < 50 and ball.xcor() < -420:
         ball.positive_x = True
 
     screen.update()
