@@ -41,3 +41,8 @@ class Ball(Turtle):
             self.setx(self.xcor() + 10)
         else:
             self.setx(self.xcor() - 10)
+
+    def reset_position(self):
+        self.goto(0, 0)
+        self.positive_x = True
+        self.positive_y = True
