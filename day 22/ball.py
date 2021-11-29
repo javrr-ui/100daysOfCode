@@ -19,6 +19,7 @@ class Ball(Turtle):
         self.positive_y = True
 
     def move(self):
+        # Code to make ball bounce when it reaches y-axis walls
         if self.ycor() <= self.upper_limit and self.positive_y:
             self.sety(self.ycor() + 10)
         else:
