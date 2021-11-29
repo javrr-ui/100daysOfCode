@@ -28,10 +28,16 @@ class Ball(Turtle):
             if self.ycor() <= self.lower_limit:
                 self.positive_y = True
 
-        if self.xcor() <= self.right_limit and self.positive_x:
+        # Code to make ball bounce when it reaches x-axis walls
+        # if self.xcor() <= self.right_limit and self.positive_x:
+        #     self.setx(self.xcor() + 10)
+        # else:
+        #     self.positive_x = False
+        #     self.setx(self.xcor() - 10)
+        #     if self.xcor() <= self.left_limit:
+        #         self.positive_x = True
+
+        if self.positive_x:
             self.setx(self.xcor() + 10)
         else:
-            self.positive_x = False
             self.setx(self.xcor() - 10)
-            if self.xcor() <= self.left_limit:
-                self.positive_x = True
