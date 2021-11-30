@@ -48,6 +48,7 @@ while True:
 
     if ball.xcor() > 500:
         ball.reset_position()
+        scoreboard.increase_l_score()
 
     screen.update()
 screen.exitonclick()
