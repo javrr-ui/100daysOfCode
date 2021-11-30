@@ -43,6 +43,7 @@ while True:
         ball.positive_x = False
 
     if ball.xcor() < -500:
+        scoreboard.increase_r_score()
         ball.reset_position()
 
     if ball.xcor() > 500:
