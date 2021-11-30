@@ -44,5 +44,9 @@ class Ball(Turtle):
 
     def reset_position(self):
         self.goto(0, 0)
-        self.positive_x = True
+        if self.positive_x:
+            self.positive_x = False
+        else:
+            self.positive_x = True
+
         self.positive_y = True
