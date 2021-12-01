@@ -10,6 +10,8 @@ screen.listen()
 
 player = Player()
 
+screen.onkeypress(player.move_up, "w")
+
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
