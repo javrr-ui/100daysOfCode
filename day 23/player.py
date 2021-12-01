@@ -2,4 +2,5 @@ from turtle import Turtle
 
 
 class Player(Turtle):
-    pass
+    def __init__(self):
+        super().__init__()
