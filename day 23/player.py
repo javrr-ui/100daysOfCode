@@ -7,3 +7,4 @@ class Player(Turtle):
         self.shape("turtle")
         self.setheading(90)
         self.goto(0, -280)
+        self.penup()
