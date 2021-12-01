@@ -6,3 +6,4 @@ class Player(Turtle):
         super().__init__()
         self.shape("turtle")
         self.setheading(90)
+        self.goto(0, -280)
