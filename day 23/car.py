@@ -1,4 +1,5 @@
 from turtle import Turtle
+COLORS = ["red", "green", "yellow", "orange", "blue", "purple"]
 
 
 class Car(Turtle):
