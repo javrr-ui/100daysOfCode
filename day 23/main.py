@@ -1,6 +1,7 @@
 import time
 from turtle import Screen
 from player import Player
+from car import Car
 
 
 screen = Screen()
