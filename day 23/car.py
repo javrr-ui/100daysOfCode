@@ -8,3 +8,4 @@ class Car(Turtle):
         super().__init__()
         self.shape("square")
         self.shapesize(stretch_len=2, stretch_wid=1)
+        self.color(choice(COLORS))
