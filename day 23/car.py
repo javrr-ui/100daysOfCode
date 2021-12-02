@@ -1,5 +1,5 @@
 from turtle import Turtle
-from random import choice
+from random import choice, randint
 COLORS = ["red", "green", "yellow", "orange", "blue", "purple"]
 
 
