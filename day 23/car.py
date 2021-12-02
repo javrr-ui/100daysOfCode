@@ -12,3 +12,6 @@ class Car(Turtle):
         self.penup()
         self.speed = randint(5, 10)
         self.setx(300)
+
+    def move(self):
+        self.setx(self.xcor() - self.speed)
