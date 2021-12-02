@@ -9,3 +9,4 @@ class Car(Turtle):
         self.shape("square")
         self.shapesize(stretch_len=2, stretch_wid=1)
         self.color(choice(COLORS))
+        self.penup()
