@@ -11,3 +11,4 @@ class Car(Turtle):
         self.color(choice(COLORS))
         self.penup()
         self.speed = randint(5, 10)
+        self.setx(300)
