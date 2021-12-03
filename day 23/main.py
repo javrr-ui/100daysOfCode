@@ -22,3 +22,5 @@ while game_is_on:
         highway.fill()
     highway.move_cars()
     screen.update()
+    loop_count += 1
+
