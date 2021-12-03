@@ -10,8 +10,9 @@ class Car(Turtle):
         self.shapesize(stretch_len=2, stretch_wid=1)
         self.color(choice(COLORS))
         self.penup()
-        self.speed = randint(3, 7)
-        self.setx(300)
+        self.speed = 5
+        self.setx(x_pos)
+        self.sety(y_pos)
 
     def move(self):
         self.setx(self.xcor() - self.speed)
