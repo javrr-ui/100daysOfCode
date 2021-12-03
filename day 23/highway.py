@@ -25,3 +25,11 @@ class Highway:
         for y_position in range(-230, 250, 50):
             car = Car(x_pos=randrange(300, 800, 100), y_pos=y_position)
             self.cars.append(car)
+
+    def move_cars(self):
+        for car in self.cars:
+            car.move()
+
+            if car.xcor() < -self.highway_width - 50:
+                car.hideturtle()
+                self.cars.remove(car)
