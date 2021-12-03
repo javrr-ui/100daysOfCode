@@ -14,7 +14,7 @@ player = Player()
 highway = Highway(screen)
 highway.fill()
 screen.onkeypress(player.move_up, "w")
-
+loop_count = 0
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
