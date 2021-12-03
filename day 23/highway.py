@@ -1,5 +1,6 @@
 from car import Car
 from turtle import Turtle
+from random import randrange
 
 
 class Highway:
