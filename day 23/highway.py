@@ -1,4 +1,5 @@
 from car import Car
+from turtle import Turtle
 
 
 class Highway:
