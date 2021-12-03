@@ -20,3 +20,8 @@ class Highway:
         line.goto(self.highway_width, -self.highway_height)
         line.pendown()
         line.goto(-self.highway_width, -self.highway_height)
+
+    def fill(self):
+        for y_position in range(-230, 250, 50):
+            car = Car(x_pos=randrange(300, 800, 100), y_pos=y_position)
+            self.cars.append(car)
