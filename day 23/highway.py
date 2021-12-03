@@ -10,7 +10,6 @@ class Highway:
         self.highway_limits()
         self.cars = []
 
-
     def highway_limits(self):
         line = Turtle()
         line.penup()
