@@ -11,6 +11,8 @@ screen.listen()
 
 player = Player()
 
+highway = Highway(screen)
+highway.fill()
 screen.onkeypress(player.move_up, "w")
 
 game_is_on = True
