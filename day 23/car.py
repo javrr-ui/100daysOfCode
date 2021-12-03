@@ -4,7 +4,7 @@ COLORS = ["red", "green", "yellow", "orange", "blue", "purple"]
 
 
 class Car(Turtle):
-    def __init__(self):
+    def __init__(self, x_pos, y_pos):
         super().__init__()
         self.shape("square")
         self.shapesize(stretch_len=2, stretch_wid=1)
