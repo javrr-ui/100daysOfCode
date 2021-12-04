@@ -9,6 +9,7 @@ class Highway:
         self.highway_width = screen.window_width() / 2
         self.highway_limits()
         self.cars = []
+        self.cars_speed = 5
 
     def highway_limits(self):
         line = Turtle()
