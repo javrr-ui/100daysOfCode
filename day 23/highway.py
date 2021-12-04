@@ -35,3 +35,8 @@ class Highway:
             if car.xcor() < -self.highway_width - 50:
                 car.hideturtle()
                 self.cars.remove(car)
+
+    def increase_speed(self):
+        self.cars_speed *= 1.2
+        for car in self.cars:
+            car.speed = self.cars_speed
