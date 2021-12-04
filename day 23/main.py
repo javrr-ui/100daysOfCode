@@ -11,7 +11,7 @@ screen.tracer(0)
 screen.listen()
 
 player = Player()
-
+scoreboard = Scoreboard()
 highway = Highway(screen)
 highway.fill()
 screen.onkeypress(player.move_up, "w")
