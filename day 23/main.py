@@ -28,4 +28,8 @@ while game_is_on:
         if car.distance(player) < 20:
             game_is_on = False
 
+    if player.ycor() > highway.highway_height:
+        player.reset_position()
+        highway.increase_speed()
+
 screen.exitonclick()
