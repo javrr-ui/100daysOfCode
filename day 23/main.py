@@ -3,6 +3,7 @@ from turtle import Screen
 from player import Player
 from car import Car
 from highway import Highway
+from scoreboard import Scoreboard
 
 screen = Screen()
 screen.setup(width=600, height=600)
