@@ -7,3 +7,7 @@ class Scoreboard(Turtle):
         self.level = 1
         self.color("black")
         self.hideturtle()
+
+    def update(self):
+        self.clear()
+        self.write(f"Level: {self.level}", False, align="center", font=('Arial', 18, 'normal'))
