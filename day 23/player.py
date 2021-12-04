@@ -1,5 +1,5 @@
 from turtle import Turtle
-MOVE_DISTANCE = 10
+MOVE_DISTANCE = 5
 
 
 class Player(Turtle):
