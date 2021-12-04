@@ -24,3 +24,4 @@ while game_is_on:
     screen.update()
     loop_count += 1
 
+screen.exitonclick()
