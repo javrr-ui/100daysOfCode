@@ -25,6 +25,7 @@ class Highway:
     def fill(self):
         for y_position in range(-230, 250, 50):
             car = Car(x_pos=randrange(300, 800, 100), y_pos=y_position)
+            car.change_speed(self.cars_speed)
             self.cars.append(car)
 
     def move_cars(self):
