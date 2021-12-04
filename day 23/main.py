@@ -33,5 +33,5 @@ while game_is_on:
         player.reset_position()
         highway.increase_speed()
         scoreboard.level_up()
-
+scoreboard.game_over()
 screen.exitonclick()
