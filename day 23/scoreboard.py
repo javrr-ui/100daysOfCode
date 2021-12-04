@@ -6,3 +6,4 @@ class Scoreboard(Turtle):
         super().__init__()
         self.level = 1
         self.color("black")
+        self.hideturtle()
