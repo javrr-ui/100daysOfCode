@@ -16,3 +16,6 @@ class Car(Turtle):
 
     def move(self):
         self.setx(self.xcor() - self.speed)
+
+    def change_speed(self, new_speed):
+        self.speed = new_speed
