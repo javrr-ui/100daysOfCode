@@ -24,4 +24,8 @@ while game_is_on:
     screen.update()
     loop_count += 1
 
+    for car in highway.cars:
+        if car.distance(player) < 20:
+            game_is_on = False
+
 screen.exitonclick()
