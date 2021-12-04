@@ -32,5 +32,6 @@ while game_is_on:
     if player.ycor() > highway.highway_height:
         player.reset_position()
         highway.increase_speed()
+        scoreboard.level_up()
 
 screen.exitonclick()
