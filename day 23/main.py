@@ -14,13 +14,11 @@ player = Player()
 scoreboard = Scoreboard()
 highway = Highway(screen)
 screen.onkeypress(player.move_up, "w")
-loop_count = 0
 game_is_on = True
 while game_is_on:
     time.sleep(0.05)
     highway.move_cars()
     screen.update()
-    loop_count += 1
 
     for car in highway.cars:
         if car.distance(player) < 20:
