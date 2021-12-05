@@ -13,14 +13,11 @@ screen.listen()
 player = Player()
 scoreboard = Scoreboard()
 highway = Highway(screen)
-highway.fill()
 screen.onkeypress(player.move_up, "w")
 loop_count = 0
 game_is_on = True
 while game_is_on:
     time.sleep(0.05)
-    if loop_count % 70 == 0:
-        highway.fill()
     highway.move_cars()
     screen.update()
     loop_count += 1
