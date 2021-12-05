@@ -36,7 +36,7 @@ class Highway:
                 car.hideturtle()
                 self.cars.remove(car)
 
-        if len(self.cars) < 10:
+        if len(self.cars) < 18:
             self.fill()
 
     def increase_speed(self):
