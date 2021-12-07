@@ -56,3 +56,10 @@ class Snake:
             y = self.snake_body[segment - 1].ycor()
             self.snake_body[segment].goto(x, y)
         self.snake_body[0].forward(20)
+
+    def reset(self):
+        for segment in self.snake_body:
+            segment.color("black")
+        self.snake_body.clear()
+        self.build_snake(3)
+        self.head = self.snake_body[0]
