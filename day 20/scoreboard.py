@@ -3,11 +3,11 @@ from turtle import Turtle
 
 class Scoreboard(Turtle):
     def __init__(self):
+        super().__init__()
         self.score = 0
-        self.scoreboard = Turtle()
-        self.scoreboard.color("white")
-        self.scoreboard.hideturtle()
-        self.scoreboard.goto(0, 260)
+        self.color("white")
+        self.hideturtle()
+        self.goto(0, 260)
         self.update_score()
 
     def add_point(self):
@@ -15,9 +15,9 @@ class Scoreboard(Turtle):
         self.update_score()
 
     def update_score(self):
-        self.scoreboard.clear()
-        self.scoreboard.write(f"Score: {self.score}", False, align="center", font=('Arial', 20, 'normal'))
+        self.clear()
+        self.write(f"Score: {self.score}", False, align="center", font=('Arial', 20, 'normal'))
 
     def game_over(self):
-        self.scoreboard.goto(0, 0)
-        self.scoreboard.write("GAME OVER", False, align="center", font=('Arial', 25, 'normal'))
+        self.goto(0, 0)
+        self.write("GAME OVER", False, align="center", font=('Arial', 25, 'normal'))
