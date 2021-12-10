@@ -1,4 +1,5 @@
 from turtle import Turtle
+from file_reader import FileReader
 
 
 class Scoreboard(Turtle):
