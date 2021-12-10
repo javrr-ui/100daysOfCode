@@ -1,5 +1,6 @@
 class FileReader:
-    def get_high_score(self):
+    @staticmethod
+    def get_high_score():
         with open("data.txt") as file:
             high_score = file.read()
             if high_score:
