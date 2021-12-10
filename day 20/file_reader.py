@@ -7,6 +7,7 @@ class FileReader:
             except ValueError:
                 return 0
 
-    def set_high_score(self, new_high_score):
+    @staticmethod
+    def set_high_score(new_high_score):
         with open("data.txt", mode="w") as file:
             file.write(new_high_score)
