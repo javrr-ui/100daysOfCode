@@ -2,10 +2,9 @@ class FileReader:
     @staticmethod
     def get_high_score():
         with open("data.txt") as file:
-            high_score = file.read()
-            if high_score:
-                return high_score
-            else:
+            try:
+                return int(file.read())
+            except ValueError:
                 return 0
 
     def set_high_score(self, new_high_score):
