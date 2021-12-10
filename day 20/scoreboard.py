@@ -23,6 +23,7 @@ class Scoreboard(Turtle):
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
+            FileReader.set_high_score(str(self.high_score))
 
         self.score = 0
         self.update_score()
