@@ -9,3 +9,7 @@
 
 with open("input/letters/starting_letter.txt") as letter_file:
     letter = letter_file.read()
+
+with open("input/names/invited_names.txt") as invited_names:
+    invited = invited_names.readlines()
+    invited = list(map(str.strip, invited))
