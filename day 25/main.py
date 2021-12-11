@@ -1,2 +1,2 @@
 with open("weather_data.csv") as file:
-    data = file.readlines()
+    data = list(map(str.strip, file.readlines()))
