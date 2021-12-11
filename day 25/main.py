@@ -9,3 +9,5 @@
 #     temperatures.__delitem__(0)
 #     temperatures = [int(temp) for temp in temperatures]
 #     print(temperatures)
+
+import pandas
