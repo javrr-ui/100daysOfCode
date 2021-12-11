@@ -13,3 +13,8 @@ with open("input/letters/starting_letter.txt") as letter_file:
 with open("input/names/invited_names.txt") as invited_names:
     invited = invited_names.readlines()
     invited = list(map(str.strip, invited))
+
+for name in invited:
+    custom_letter = letter.replace("[name]", name)
+    with open(f"output/readyToSend/letter_for_{name}.txt", mode="w") as custom_file:
+        custom_file.write(custom_letter)
