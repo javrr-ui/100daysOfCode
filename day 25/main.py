@@ -5,5 +5,7 @@ import csv
 
 with open("weather_data.csv") as weather_file:
     data = csv.reader(weather_file)
-    for row in data:
-        print(row)
+    temperatures = [row[1] for row in data]
+    temperatures.__delitem__(0)
+    temperatures = [int(temp) for temp in temperatures]
+    print(temperatures)
