@@ -25,3 +25,11 @@ print(data[data["day"] == "Monday"])
 
 # Get row with max temperature
 print(data[data["temp"] == data["temp"].max()])
+
+# Create a dataframe from scratch
+data_dict = {
+    "students": ["Amy", "James", "Angela"],
+    "scores": [76, 56, 65]
+}
+data = pandas.DataFrame(data_dict)
+print(data)
