@@ -22,3 +22,6 @@ print(f"Maximum temperature is: {data['temp'].max()}")
 
 # Get data in a row
 print(data[data["day"] == "Monday"])
+
+# Get row with max temperature
+print(data[data["temp"] == data["temp"].max()])
