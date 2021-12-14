@@ -19,3 +19,6 @@ print(temp_list)
 avg_temp = "{:.2f}".format(data["temp"].mean())
 print(f"Average temperature is: {avg_temp}")
 print(f"Maximum temperature is: {data['temp'].max()}")
+
+# Get data in a row
+print(data[data["day"] == "Monday"])
