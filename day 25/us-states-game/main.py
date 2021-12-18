@@ -10,4 +10,6 @@ turtle.shape(image)
 answer = screen.textinput(title="Guess the State", prompt="What's another state's name?")
 answer = answer.title()
 
+data = pandas.read_csv("50_states.csv")
+
 turtle.mainloop()
