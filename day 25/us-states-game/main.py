@@ -14,4 +14,7 @@ answer = answer.title()
 data = pandas.read_csv("50_states.csv")
 state = data[data["state"] == answer]
 
+if answer in list(state["state"]):
+    pass
+
 turtle.mainloop()
