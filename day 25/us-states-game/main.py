@@ -18,11 +18,12 @@ while True:
     data = pandas.read_csv("50_states.csv")
     state = data[data["state"] == answer]
 
+    if answer == "Exit":
+        break
+
     if answer in list(state["state"]):
         x = state["x"].item()
         y = state["y"].item()
         text.goto(x, y)
         text.write(answer, align="center", font=("Arial", 8, "normal"))
         user_states.append(answer)
-
-turtle.mainloop()
