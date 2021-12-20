@@ -17,5 +17,7 @@ state = data[data["state"] == answer]
 if answer in list(state["state"]):
     x = state["x"].item()
     y = state["y"].item()
+    text.goto(x, y)
+    text.write(answer, align="center", font=("Arial", 8, "normal"))
 
 turtle.mainloop()
