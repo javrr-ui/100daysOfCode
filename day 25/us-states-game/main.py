@@ -8,6 +8,7 @@ screen.addshape(image)
 turtle.shape(image)
 text = turtle.Turtle()
 text.hideturtle()
+text.penup()
 
 answer = screen.textinput(title="Guess the State", prompt="What's another state's name?")
 answer = answer.title()
