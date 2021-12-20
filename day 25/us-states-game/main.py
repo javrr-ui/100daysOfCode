@@ -23,5 +23,6 @@ while True:
         y = state["y"].item()
         text.goto(x, y)
         text.write(answer, align="center", font=("Arial", 8, "normal"))
+        user_states.append(answer)
 
 turtle.mainloop()
