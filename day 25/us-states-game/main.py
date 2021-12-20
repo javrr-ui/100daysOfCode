@@ -12,7 +12,7 @@ text.penup()
 user_states = []
 
 while True:
-    answer = screen.textinput(title="Guess the State", prompt="What's another state's name?")
+    answer = screen.textinput(title=f"{len(user_states)}/50 States Correct", prompt="What's another state's name?")
     answer = answer.title()
 
     data = pandas.read_csv("50_states.csv")
