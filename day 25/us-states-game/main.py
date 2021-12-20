@@ -15,6 +15,7 @@ data = pandas.read_csv("50_states.csv")
 state = data[data["state"] == answer]
 
 if answer in list(state["state"]):
-    pass
+    x = state["x"].item()
+    y = state["y"].item()
 
 turtle.mainloop()
