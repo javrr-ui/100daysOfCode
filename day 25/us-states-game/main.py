@@ -11,5 +11,6 @@ answer = screen.textinput(title="Guess the State", prompt="What's another state'
 answer = answer.title()
 
 data = pandas.read_csv("50_states.csv")
+state = data[data["state"] == answer]
 
 turtle.mainloop()
