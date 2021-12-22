@@ -28,3 +28,10 @@ while True:
         text.goto(x, y)
         text.write(answer, align="center", font=("Arial", 8, "normal"))
         user_states.append(answer)
+        missing_states.remove(answer)
+
+missing_states_dict = {
+    "missing states": missing_states
+}
+df = pandas.DataFrame(missing_states_dict)
+df.to_csv("missing_states.csv")
