@@ -17,7 +17,6 @@ while True:
     answer = screen.textinput(title=f"{len(user_states)}/50 States Correct", prompt="What's another state's name?")
     answer = answer.title()
 
-    data = pandas.read_csv("50_states.csv")
     state = data[data["state"] == answer]
 
     if answer == "Exit":
