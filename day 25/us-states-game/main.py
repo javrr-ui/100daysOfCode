@@ -11,7 +11,7 @@ text.hideturtle()
 text.penup()
 user_states = []
 data = pandas.read_csv("50_states.csv")
-
+missing_states = data["state"].to_list()
 
 while True:
     answer = screen.textinput(title=f"{len(user_states)}/50 States Correct", prompt="What's another state's name?")
