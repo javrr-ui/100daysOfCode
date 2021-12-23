@@ -26,7 +26,7 @@ while True:
         x = state["x"].item()
         y = state["y"].item()
         text.goto(x, y)
-        text.write(answer, align="center", font=("Arial", 8, "normal"))
+        text.write(answer, align="center", font=("Arial", 9, "normal"))
         user_states.append(answer)
         missing_states.remove(answer)
 
