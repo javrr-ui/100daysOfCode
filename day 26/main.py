@@ -10,3 +10,6 @@ names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
 # print(short_names)
 
 import random
+
+student_scores = {student: random.randint(1, 100) for student in names}
+print(student_scores)
