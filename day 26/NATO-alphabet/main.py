@@ -32,3 +32,5 @@ alpha_dict = {row.letter: row.code for (index, row) in alphabet.iterrows()}
 
 word = input("Enter a word: ").upper()
 
+nato = [alpha_dict[letter] for letter in word]
+print(nato)
