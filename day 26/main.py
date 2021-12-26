@@ -17,3 +17,14 @@ import random
 # passed_students = {student: score for (student, score) in student_scores.items() if score >= 60}
 # print(passed_students)
 
+# Iterate through a Pandas Data Frame
+import pandas
+student_dict = {
+    "student": ["Angela", "James", "Lily"],
+    "score": [56, 76, 98]
+}
+
+df = pandas.DataFrame(student_dict)
+
+for (index, row) in df.iterrows():
+    print(row.student, row.score)
