@@ -6,5 +6,7 @@ numbers = [1, 2, 3, 4]
 # print(new_list)
 
 names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
-short_names = [name.upper() for name in names if len(name) > 5]
-print(short_names)
+# short_names = [name.upper() for name in names if len(name) > 5]
+# print(short_names)
+
+import random
