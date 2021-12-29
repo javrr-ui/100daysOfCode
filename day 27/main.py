@@ -15,4 +15,9 @@ def clicked():
 
 button = tkinter.Button(text="Click me", command=clicked)
 button.pack()
+
+#Entry
+
+input = tkinter.Entry(width=20)
+input.pack()
 window.mainloop()
