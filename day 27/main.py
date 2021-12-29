@@ -20,4 +20,5 @@ button.pack()
 
 input = tkinter.Entry(width=20)
 input.pack()
+
 window.mainloop()
