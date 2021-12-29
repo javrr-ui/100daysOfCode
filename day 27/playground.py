@@ -10,7 +10,7 @@ def calculate(n, **kwargs):
     n += kwargs["add"]
     n *= kwargs["multiply"]
 
-    print(n)
+    return n
 
 
 print(calculate(3, add=5, multiply=4))
