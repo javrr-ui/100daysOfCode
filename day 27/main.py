@@ -7,7 +7,12 @@ window.minsize(width=500, height=300)
 label = tkinter.Label(text="A label")
 label.pack()
 
+
 # Button
-button = tkinter.Button(text="Click me")
+def clicked():
+    print("You clicked!")
+
+
+button = tkinter.Button(text="Click me", command=clicked)
 button.pack()
 window.mainloop()
