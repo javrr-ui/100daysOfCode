@@ -10,7 +10,7 @@ label.pack()
 
 # Button
 def clicked():
-    print("You clicked!")
+    label["text"] = "Button clicked"
 
 
 button = tkinter.Button(text="Click me", command=clicked)
