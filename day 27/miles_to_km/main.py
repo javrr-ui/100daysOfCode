@@ -2,6 +2,7 @@ from tkinter import *
 
 window = Tk()
 window.title("Mile to Km converter")
+window.config(padx=20, pady=20)
 
 label1 = Label(text="is equal to")
 label1.grid(column=0, row=1)
