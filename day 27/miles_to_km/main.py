@@ -20,7 +20,7 @@ miles_entry.grid(column=1, row=0)
 km = Label(text="0")
 km.grid(column=1, row=1)
 
-button = Button(text="Convert")
+button = Button(text="Convert", command=convert)
 button.grid(column=1, row=2)
 
 miles_label = Label(text="miles")
