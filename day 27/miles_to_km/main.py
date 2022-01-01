@@ -19,4 +19,7 @@ button.grid(column=1, row=2)
 miles_label = Label(text="miles")
 miles_label.grid(column=2, row=0)
 
+km_label = Label(text="km")
+km_label.grid(column=2, row=1)
+
 window.mainloop()
