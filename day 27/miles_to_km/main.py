@@ -10,4 +10,7 @@ label1.grid(column=0, row=1)
 miles_entry = Entry()
 miles_entry.grid(column=1, row=0)
 
+km_label = Label(text="0")
+km_label.grid(column=1, row=1)
+
 window.mainloop()
