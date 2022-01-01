@@ -16,4 +16,7 @@ km_label.grid(column=1, row=1)
 button = Button(text="Convert")
 button.grid(column=1, row=2)
 
+miles_label = Label(text="miles")
+miles_label.grid(column=2, row=0)
+
 window.mainloop()
