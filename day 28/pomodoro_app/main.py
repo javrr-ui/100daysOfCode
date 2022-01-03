@@ -18,5 +18,6 @@ LONG_BREAK_MIN = 20
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro App")
+canvas = Canvas(width=200, height=224)
 
 window.mainloop()
