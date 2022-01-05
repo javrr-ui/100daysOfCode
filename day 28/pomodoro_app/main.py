@@ -29,6 +29,9 @@ start_button.grid(column=0, row=2)
 reset_button = Button(text="Reset")
 reset_button.grid(column=2, row=2)
 
+checks_label = Label(text="✔", bg=YELLOW, fg=GREEN, font=(FONT_NAME, 20, "normal"))
+checks_label.grid(column=1, row=3)
+
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 tomato_img = PhotoImage(file="tomato.png")
 canvas.create_image(100, 112, image=tomato_img)
