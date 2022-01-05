@@ -20,7 +20,7 @@ window = Tk()
 window.title("Pomodoro App")
 window.config(padx=100, pady=50, bg=YELLOW)
 
-timer_label = Label(text="Timer", bg=YELLOW, fg=GREEN, font=("Times New Roman", 30, "bold"))
+timer_label = Label(text="Timer", bg=YELLOW, fg=GREEN, font=(FONT_NAME, 30, "bold"))
 timer_label.grid(column=1, row=0)
 
 start_button = Button(text="Start")
