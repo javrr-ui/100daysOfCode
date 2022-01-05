@@ -1,5 +1,5 @@
 from tkinter import *
-import math
+
 
 def convert():
     miles = float(miles_entry.get())
