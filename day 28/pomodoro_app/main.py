@@ -33,7 +33,7 @@ window.config(padx=100, pady=50, bg=YELLOW)
 timer_label = Label(text="Timer", bg=YELLOW, fg=GREEN, font=(FONT_NAME, 30, "bold"))
 timer_label.grid(column=1, row=0)
 
-start_button = Button(text="Start")
+start_button = Button(text="Start", command=start_timer)
 start_button.grid(column=0, row=2)
 
 reset_button = Button(text="Reset")
