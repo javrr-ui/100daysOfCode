@@ -48,7 +48,7 @@ def count_down(count):
         window.after(1000, count_down, count - 1)
     else:
         if reps % 2 == 0:
-            checks_label.config(text=checks_label["text"]+"✔")
+            checks_label.config(text=checks_label["text"] + "✔")
         start_timer()
 
 
