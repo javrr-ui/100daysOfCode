@@ -15,6 +15,9 @@ timer = None
 
 
 # ---------------------------- TIMER RESET ------------------------------- #
+def reset_timer():
+    window.after_cancel(timer)
+
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
