@@ -47,7 +47,8 @@ def count_down(count):
 
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
-        window.after(1000, count_down, count - 1)
+        global timer
+        timer = window.after(1000, count_down, count - 1)
     else:
         if reps % 2 == 0:
             checks_label.config(text=checks_label["text"] + "✔")
