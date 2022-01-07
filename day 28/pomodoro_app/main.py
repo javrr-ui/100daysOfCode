@@ -18,7 +18,9 @@ reps = 0
 def start_timer():
     global reps
     reps += 1
-    count_down(5 * 60)
+    work_sec = WORK_MIN * 60
+    short_break_sec = SHORT_BREAK_MIN * 60
+    long_break_sec = LONG_BREAK_MIN * 60
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
