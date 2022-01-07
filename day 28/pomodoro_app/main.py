@@ -35,7 +35,7 @@ def start_timer():
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
-
+    global reps
     count_min = math.floor(count / 60)
     count_sec = count % 60
     if int(count_sec) < 10:
@@ -47,6 +47,8 @@ def count_down(count):
     if count > 0:
         window.after(1000, count_down, count - 1)
     else:
+        if reps % 2 == 0:
+            checks_label.config(text=checks_label["text"]+"✔")
         start_timer()
 
 
