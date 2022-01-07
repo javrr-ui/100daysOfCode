@@ -16,6 +16,8 @@ reps = 0
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
+    global reps
+    reps += 1
     count_down(5 * 60)
 
 
