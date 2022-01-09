@@ -17,4 +17,7 @@ canvas.grid(column=1, row=0)
 website_label = Label(text="Website:")
 website_label.grid(column=0, row=1)
 
+website_entry = Entry(width=35)
+website_entry.grid(column=1, row=1, columnspan=2)
+
 window.mainloop()
