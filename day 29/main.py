@@ -14,4 +14,7 @@ logo_image = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=logo_image)
 canvas.grid(column=1, row=0)
 
+website_label = Label(text="Website:")
+website_label.grid(column=0, row=1)
+
 window.mainloop()
