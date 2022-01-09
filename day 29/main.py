@@ -20,4 +20,7 @@ website_label.grid(column=0, row=1)
 website_entry = Entry(width=35)
 website_entry.grid(column=1, row=1, columnspan=2)
 
+username_label = Label(text="Email/Username:")
+username_label.grid(column=0, row=2)
+
 window.mainloop()
