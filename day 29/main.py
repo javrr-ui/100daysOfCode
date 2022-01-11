@@ -11,7 +11,8 @@ def save():
     info = f"{website} | {username} | {password} \n"
     with open("data.txt", "a") as file:
         file.write(info)
-
+    website_entry.delete(0, END)
+    password_entry.delete(0, END)
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
