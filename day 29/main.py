@@ -8,6 +8,7 @@ def save():
     website = website_entry.get()
     username = username_entry.get()
     password = password_entry.get()
+    info = f"{website} | {username} | {password}"
     with open("data.txt", "w") as file:
         pass
 
