@@ -13,6 +13,9 @@ def save():
         data = file.readlines()
     data.append(info)
 
+    with open("data.txt", "w") as file:
+        file.writelines(data)
+
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
