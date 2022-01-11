@@ -5,7 +5,8 @@ from tkinter import *
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-    pass
+    with open("data.txt", "w") as file:
+        pass
 
 
 # ---------------------------- UI SETUP ------------------------------- #
