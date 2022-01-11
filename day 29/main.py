@@ -9,12 +9,8 @@ def save():
     username = username_entry.get()
     password = password_entry.get()
     info = f"{website} | {username} | {password} \n"
-    with open("data.txt", "r") as file:
-        data = file.readlines()
-    data.append(info)
-
-    with open("data.txt", "w") as file:
-        file.writelines(data)
+    with open("data.txt", "a") as file:
+        file.write(info)
 
 # ---------------------------- UI SETUP ------------------------------- #
 
