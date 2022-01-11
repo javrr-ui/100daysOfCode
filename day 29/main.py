@@ -11,13 +11,15 @@ def save():
     password = password_entry.get()
 
     save_data = messagebox.askokcancel(title=website, message=f"These are the details entered:\nEmail: {username}\n"
-                                                  f"Password: {password}\nIs it ok to save?")
+                                                              f"Password: {password}\nIs it ok to save?")
     if save_data:
         info = f"{website} | {username} | {password} \n"
         with open("data.txt", "a") as file:
             file.write(info)
         website_entry.delete(0, END)
         password_entry.delete(0, END)
+
+
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
