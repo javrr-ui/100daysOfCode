@@ -11,6 +11,7 @@ def save():
     info = f"{website} | {username} | {password}"
     with open("data.txt", "r") as file:
         data = file.readlines()
+    data.append(info)
 
 # ---------------------------- UI SETUP ------------------------------- #
 
