@@ -5,6 +5,9 @@ from tkinter import *
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
+    website = website_entry.get()
+    username = username_entry.get()
+    password = password_entry.get()
     with open("data.txt", "w") as file:
         pass
 
