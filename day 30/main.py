@@ -11,3 +11,5 @@ else:
     print(content)
 finally:
     file.close()
+
+raise ValueError("Raise error example")
