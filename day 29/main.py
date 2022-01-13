@@ -29,6 +29,12 @@ def save():
     website = website_entry.get()
     username = username_entry.get()
     password = password_entry.get()
+    new_data = {
+        website: {
+            "email": username,
+            "password": password
+        }
+    }
     if len(website) == 0 or len(username) == 0 or len(password) == 0:
         messagebox.showinfo(title="Something is wrong", message="Please don't leave any fields empty!")
     else:
