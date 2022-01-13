@@ -35,6 +35,7 @@ def save():
             "password": password
         }
     }
+    data = {}
     if len(website) == 0 or len(username) == 0 or len(password) == 0:
         messagebox.showinfo(title="Something is wrong", message="Please don't leave any fields empty!")
     else:
