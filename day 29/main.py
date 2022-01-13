@@ -43,7 +43,10 @@ def save():
                                                                   f"Password: {password}\nIs it ok to save?")
         if save_data:
             with open("data.json", "r") as file:
-                data = json.load(file)
+                try:
+                    data = json.load(file)
+                except JSONDecodeError:
+                    pass
 
             data.update(new_data)
 
