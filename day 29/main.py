@@ -1,3 +1,4 @@
+from json import JSONDecodeError
 from tkinter import *
 from tkinter import messagebox
 from random import randint, choice, shuffle
