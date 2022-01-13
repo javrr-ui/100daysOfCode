@@ -44,6 +44,8 @@ def save():
             with open("data.json", "r") as file:
                 data = json.load(file)
 
+            data.update(new_data)
+
             website_entry.delete(0, END)
             password_entry.delete(0, END)
 
