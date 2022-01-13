@@ -43,11 +43,15 @@ def save():
         save_data = messagebox.askokcancel(title=website, message=f"These are the details entered:\nEmail: {username}\n"
                                                                   f"Password: {password}\nIs it ok to save?")
         if save_data:
-            with open("data.json", "r") as file:
-                try:
-                    data = json.load(file)
-                except JSONDecodeError:
-                    pass
+            try:
+                with open("data.json", "r") as file:
+                    try:
+                        data = json.load(file)
+                    except JSONDecodeError:
+                        pass
+            except FileNotFoundError:
+                file = open("data.json", "w")
+                file.close()
 
             data.update(new_data)
             with open("data.json", "w") as file:
