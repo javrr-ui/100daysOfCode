@@ -63,7 +63,7 @@ def save():
 
 # ----------------------------- SEARCH -------------------------------- #
 def find_password():
-    find_website = website_entry.get()
+    find_website = website_entry.get().lower()
     try:
         with open("data.json", "r") as file:
             pass
