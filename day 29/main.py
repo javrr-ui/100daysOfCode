@@ -27,7 +27,7 @@ def generate_password():
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-    website = website_entry.get()
+    website = website_entry.get().title()
     username = username_entry.get()
     password = password_entry.get()
     new_data = {
