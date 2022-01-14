@@ -71,6 +71,8 @@ def find_password():
     except FileNotFoundError:
         messagebox.showinfo("Error", message="No data file found")
 
+    except JSONDecodeError:
+        messagebox.showinfo("Error", message="No data to fetch")
 
 # ---------------------------- UI SETUP ------------------------------- #
 
