@@ -73,6 +73,14 @@ def find_password():
 
     except JSONDecodeError:
         messagebox.showinfo("Error", message="No data to fetch")
+    else:
+        website = data_dict.get(find_website)
+        if website:
+            messagebox.showinfo(f"{find_website}", message=f"Email: {website.get('email')}\n"
+                                                           f"Password: {website.get('password')}")
+        else:
+            print("Not found")
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 
