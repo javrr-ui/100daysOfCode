@@ -63,7 +63,11 @@ def save():
 
 # ----------------------------- SEARCH -------------------------------- #
 def find_password():
-    pass
+    try:
+        with open("data.json", "r") as file:
+            pass
+    except FileNotFoundError:
+        messagebox.showinfo("Error", message="No data file found")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
