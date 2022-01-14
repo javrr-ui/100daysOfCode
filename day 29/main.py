@@ -79,6 +79,9 @@ website_entry = Entry(width=34)
 website_entry.grid(column=1, row=1)
 website_entry.focus()
 
+search_button = Button(text="Search", width=14)
+search_button.grid(column=2, row=1)
+
 username_label = Label(text="Email/Username:")
 username_label.grid(column=0, row=2)
 
