@@ -79,7 +79,10 @@ def find_password():
             messagebox.showinfo(f"{find_website}", message=f"Email: {website.get('email')}\n"
                                                            f"Password: {website.get('password')}")
         else:
-            print("Not found")
+            if len(find_website) == 0:
+                messagebox.showinfo(f"Error", message="Field is empty!")
+            else:
+                messagebox.showinfo(f"Error", message="No details for the website exists")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
