@@ -66,7 +66,8 @@ def find_password():
     find_website = website_entry.get().lower()
     try:
         with open("data.json", "r") as file:
-            pass
+            data_dict = json.load(file)
+
     except FileNotFoundError:
         messagebox.showinfo("Error", message="No data file found")
 
