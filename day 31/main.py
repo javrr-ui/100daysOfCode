@@ -3,3 +3,6 @@ from tkinter import *
 
 window = Tk()
 window.title("Flash Cards")
+
+
+window.mainloop()
