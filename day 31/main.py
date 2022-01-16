@@ -14,4 +14,7 @@ wrong = PhotoImage(file="images/wrong.png")
 wrong_button = Button(image=wrong, bg=BACKGROUND_COLOR)
 wrong_button.grid(column=0, row=1)
 
+right = PhotoImage(file="images/right.png")
+right_button = Button(image=right, bg=BACKGROUND_COLOR)
+right_button.grid(column=1, row=1)
 window.mainloop()
