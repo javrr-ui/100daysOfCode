@@ -6,6 +6,7 @@ window.title("Flash Cards")
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 words = pandas.read_csv("data/french_words.csv")
+words = words.to_dict(orient="records")
 
 card_front = PhotoImage(file="images/card_front.png")
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
