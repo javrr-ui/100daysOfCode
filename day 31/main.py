@@ -8,6 +8,7 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 card_back = PhotoImage(file="images/card_back.png")
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
 canvas.create_image(400, 263, image=card_back)
+canvas.create_text(400, 150, text="Title", font="Arial 40 italic")
 canvas.grid(column=0, row=0, columnspan=2)
 
 wrong = PhotoImage(file="images/wrong.png")
