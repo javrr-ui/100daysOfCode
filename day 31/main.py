@@ -10,6 +10,16 @@ words = pandas.read_csv("data/french_words.csv")
 word_count = len(words)
 words = words.to_dict(orient="records")
 shuffle(words)
+word_index = 0
+
+
+def new_card():
+    global word_index
+    word_index += 1
+    if not word_index < word_count:
+        word_index = 0
+    canvas.itemconfig(word, text=words[word_index].get("French"))
+
 
 card_front = PhotoImage(file="images/card_front.png")
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
