@@ -25,7 +25,7 @@ card_front = PhotoImage(file="images/card_front.png")
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
 canvas.create_image(400, 263, image=card_front)
 canvas.create_text(400, 150, text="French", font="Arial 40 italic")
-canvas.create_text(400, 263, text=words[0].get("French"), font="Arial 60 bold")
+word = canvas.create_text(400, 263, text=words[0].get("French"), font="Arial 60 bold")
 canvas.grid(column=0, row=0, columnspan=2)
 
 wrong = PhotoImage(file="images/wrong.png")
