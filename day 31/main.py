@@ -22,6 +22,7 @@ def new_card():
 
 
 card_front = PhotoImage(file="images/card_front.png")
+card_back = PhotoImage(file="images/card_back.png")
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
 card_image = canvas.create_image(400, 263, image=card_front)
 title = canvas.create_text(400, 150, text="French", font="Arial 40 italic")
