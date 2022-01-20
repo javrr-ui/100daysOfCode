@@ -18,7 +18,20 @@ def new_card():
     word_index += 1
     if not word_index < word_count:
         word_index = 0
+    hide_card()
+    window.after(2000, show_card)
+
+
+def show_card():
+    canvas.itemconfig(card_image, image=card_back)
+    canvas.itemconfig(word, text=words[word_index].get("English"))
+    canvas.itemconfig(title, text="English")
+
+
+def hide_card():
+    canvas.itemconfig(card_image, image=card_front)
     canvas.itemconfig(word, text=words[word_index].get("French"))
+    canvas.itemconfig(title, text="French")
 
 
 card_front = PhotoImage(file="images/card_front.png")
