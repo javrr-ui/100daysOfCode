@@ -14,6 +14,7 @@ word_index = 0
 
 
 def new_card():
+    window.after_cancel(after)
     global word_index
     word_index += 1
     if not word_index < word_count:
@@ -50,6 +51,6 @@ right = PhotoImage(file="images/right.png")
 right_button = Button(image=right, bg=BACKGROUND_COLOR, command=new_card)
 right_button.grid(column=1, row=1)
 
-window.after(3000, show_card)
+after = window.after(3000, show_card)
 
 window.mainloop()
