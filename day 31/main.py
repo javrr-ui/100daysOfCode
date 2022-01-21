@@ -35,6 +35,11 @@ def hide_card():
     canvas.itemconfig(title, text="French")
 
 
+def wait():
+    global after
+    after = window.after(3000, show_card)
+
+
 card_front = PhotoImage(file="images/card_front.png")
 card_back = PhotoImage(file="images/card_back.png")
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
