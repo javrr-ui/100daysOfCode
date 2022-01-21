@@ -13,10 +13,8 @@ except:
     words = pandas.read_csv("data/french_words.csv")
     words.to_csv("data/words_to_learn.csv", index=False)
 
-word_count = len(words)
 words = words.to_dict(orient="records")
 shuffle(words)
-word_index = 0
 
 
 def new_card(button_pressed):
