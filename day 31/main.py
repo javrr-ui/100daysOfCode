@@ -18,13 +18,22 @@ shuffle(words)
 
 
 def new_card(button_pressed):
-    window.after_cancel(after)
-    global word_index
-    word_index += 1
-    if not word_index < word_count:
-        word_index = 0
-    hide_card()
-    wait()
+    try:
+        window.after_cancel(after)
+    except:
+        pass
+
+    if button_pressed == "right_button" and len(words) > 0:
+        try:
+            df = pandas.read_csv("data/words_to_learn.csv")
+            df.drop(df[df["English"] == words[0].get("English")].index, inplace=True)
+            df.to_csv("data/words_to_learn.csv", index=False)
+            # Remove word from list AFTER removing it from dataFrame
+            words.remove(words[0])
+            hide_card()
+            wait()
+        except IndexError:
+            pass
 
 
 def show_card():
