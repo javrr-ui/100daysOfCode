@@ -9,7 +9,7 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 try:
     words = pandas.read_csv("data/words_to_learn.csv")
-except:
+except FileNotFoundError:
     words = pandas.read_csv("data/french_words.csv")
     words.to_csv("data/words_to_learn.csv", index=False)
 
