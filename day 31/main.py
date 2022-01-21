@@ -55,11 +55,11 @@ word = canvas.create_text(400, 263, text=words[0].get("French"), font="Arial 60 
 canvas.grid(column=0, row=0, columnspan=2)
 
 wrong = PhotoImage(file="images/wrong.png")
-wrong_button = Button(image=wrong, bg=BACKGROUND_COLOR, command=new_card)
+wrong_button = Button(image=wrong, bg=BACKGROUND_COLOR, command=lambda m="wrong_button": new_card(m))
 wrong_button.grid(column=0, row=1)
 
 right = PhotoImage(file="images/right.png")
-right_button = Button(image=right, bg=BACKGROUND_COLOR, command=new_card)
+right_button = Button(image=right, bg=BACKGROUND_COLOR, command=lambda m="right_button": new_card(m))
 right_button.grid(column=1, row=1)
 
 wait()
