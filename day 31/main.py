@@ -19,7 +19,7 @@ shuffle(words)
 word_index = 0
 
 
-def new_card():
+def new_card(button_pressed):
     window.after_cancel(after)
     global word_index
     word_index += 1
