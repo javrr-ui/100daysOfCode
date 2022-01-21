@@ -20,7 +20,7 @@ def new_card():
     if not word_index < word_count:
         word_index = 0
     hide_card()
-    window.after(2000, show_card)
+    wait()
 
 
 def show_card():
