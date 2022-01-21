@@ -20,7 +20,7 @@ shuffle(words)
 def new_card(button_pressed):
     try:
         window.after_cancel(after)
-    except:
+    except NameError:
         pass
 
     if button_pressed == "right_button" and len(words) > 0:
