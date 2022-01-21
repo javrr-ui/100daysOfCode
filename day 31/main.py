@@ -7,7 +7,12 @@ window = Tk()
 window.title("Flash Cards")
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
-words = pandas.read_csv("data/french_words.csv")
+try:
+    words = pandas.read_csv("data/words_to_learn.csv")
+except:
+    words = pandas.read_csv("data/french_words.csv")
+    words.to_csv("data/words_to_learn.csv", index=False)
+
 word_count = len(words)
 words = words.to_dict(orient="records")
 shuffle(words)
