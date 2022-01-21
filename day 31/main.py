@@ -48,8 +48,7 @@ card_front = PhotoImage(file="images/card_front.png")
 card_back = PhotoImage(file="images/card_back.png")
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
 card_image = canvas.create_image(400, 263, image=card_front)
-title = canvas.create_text(400, 150, text="French", font="Arial 40 italic")
-word = canvas.create_text(400, 263, text=words[0].get("French"), font="Arial 60 bold")
+
 canvas.grid(column=0, row=0, columnspan=2)
 
 wrong = PhotoImage(file="images/wrong.png")
@@ -60,6 +59,12 @@ right = PhotoImage(file="images/right.png")
 right_button = Button(image=right, bg=BACKGROUND_COLOR, command=lambda m="right_button": new_card(m))
 right_button.grid(column=1, row=1)
 
-wait()
+try:
+    word = canvas.create_text(400, 263, text=words[0].get("French"), font="Arial 60 bold")
+    title = canvas.create_text(400, 150, text="French", font="Arial 40 italic")
+    wait()
+except IndexError:
+    title = canvas.create_text(400, 150, text="", font="Arial 40 italic")
+    word = canvas.create_text(400, 263, text="", font="Arial 60 bold")
 
 window.mainloop()
