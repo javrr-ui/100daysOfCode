@@ -56,6 +56,6 @@ right = PhotoImage(file="images/right.png")
 right_button = Button(image=right, bg=BACKGROUND_COLOR, command=new_card)
 right_button.grid(column=1, row=1)
 
-after = window.after(3000, show_card)
+wait()
 
 window.mainloop()
