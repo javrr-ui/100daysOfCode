@@ -26,14 +26,14 @@ def new_card():
 
 def show_card():
     canvas.itemconfig(card_image, image=card_back)
-    canvas.itemconfig(word, text=words[word_index].get("English"))
-    canvas.itemconfig(title, text="English")
+    canvas.itemconfig(word, text=words[word_index].get("English"), fill="white")
+    canvas.itemconfig(title, text="English", fill="white")
 
 
 def hide_card():
     canvas.itemconfig(card_image, image=card_front)
-    canvas.itemconfig(word, text=words[word_index].get("French"))
-    canvas.itemconfig(title, text="French")
+    canvas.itemconfig(word, text=words[word_index].get("French"), fill="black")
+    canvas.itemconfig(title, text="French", fill="black")
 
 
 def wait():
