@@ -5,3 +5,4 @@ password = "asdfsadfs"
 
 connection = smtplib.SMTP("smtp.gmail.com")
 connection.starttls()
+connection.login(user=email, password=password)
