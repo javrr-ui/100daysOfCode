@@ -10,6 +10,7 @@ with open("quotes.txt", "r") as quotes_file:
     quotes = quotes_file.readlines()
 
 quotes = [quote.strip("\n") for quote in quotes]
+random_quote = choice(quotes)
 
 email = "javiercrack351@gmail.com"
 password = "asdadada3v423v"
