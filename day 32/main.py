@@ -1,5 +1,6 @@
 import smtplib
 import datetime
+from random import choice
 
 quotes = []
 date = datetime.datetime.now()
