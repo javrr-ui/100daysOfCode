@@ -8,6 +8,7 @@ today = date.weekday()
 with open("quotes.txt", "r") as quotes_file:
     quotes = quotes_file.readlines()
 
+quotes = [quote.strip("\n") for quote in quotes]
 
 email = "javiercrack351@gmail.com"
 password = "asdadada3v423v"
