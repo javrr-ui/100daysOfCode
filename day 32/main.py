@@ -18,4 +18,5 @@ password = "asdadada3v423v"
 with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()
     connection.login(user=email, password=password)
-    connection.sendmail(from_addr=email, to_addrs="hello@gmail.com", msg="Subject:Hello\n\nHello XD")
+    connection.sendmail(from_addr=email, to_addrs="hello@gmail.com",
+                        msg=f"Subject:Today's quote\n\n{random_quote}")
