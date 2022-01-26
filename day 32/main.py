@@ -1,6 +1,7 @@
 import smtplib
 import datetime
 
+quotes = []
 date = datetime.datetime.now()
 today = date.weekday()
 
