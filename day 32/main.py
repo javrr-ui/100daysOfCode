@@ -1,6 +1,10 @@
 import smtplib
 import datetime
 
+date = datetime.datetime.now()
+today = date.weekday()
+
+
 email = "javiercrack351@gmail.com"
 password = "asdadada3v423v"
 
