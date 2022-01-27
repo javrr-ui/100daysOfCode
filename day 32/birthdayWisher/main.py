@@ -1,7 +1,7 @@
 import pandas
 import datetime
 ##################### Extra Hard Starting Project ######################
-
+congratulations_list = []
 data = pandas.read_csv("birthdays.csv")
 birthdays = data.to_dict(orient="records")
 
