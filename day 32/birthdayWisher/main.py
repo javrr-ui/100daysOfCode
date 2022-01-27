@@ -24,6 +24,10 @@ for person in birthdays:
 
 # 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
 if len(congratulations_list) > 0:
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(user=sender_email, password=password)
+
     for person in congratulations_list:
         number = randint(1, 3)
         with open(f"letter_templates/letter_{number}.txt", "r") as letter_file:
