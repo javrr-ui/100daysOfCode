@@ -2,6 +2,7 @@ import pandas
 import datetime
 from random import randint
 import smtplib
+import json
 ##################### Extra Hard Starting Project ######################
 congratulations_list = []
 data = pandas.read_csv("birthdays.csv")
