@@ -7,7 +7,8 @@ import json
 congratulations_list = []
 data = pandas.read_csv("birthdays.csv")
 birthdays = data.to_dict(orient="records")
-
+with open("credentials.json", "r") as file:
+    credentials = json.load(file)
 # 1. Update the birthdays.csv
 
 # 2. Check if today matches a birthday in the birthdays.csv
