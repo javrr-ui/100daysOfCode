@@ -3,7 +3,8 @@ import datetime
 ##################### Extra Hard Starting Project ######################
 
 data = pandas.read_csv("birthdays.csv")
-print(data)
+birthdays = data.to_dict(orient="records")
+
 # 1. Update the birthdays.csv
 
 # 2. Check if today matches a birthday in the birthdays.csv
