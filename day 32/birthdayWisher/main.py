@@ -1,3 +1,5 @@
+import pandas
+import datetime
 ##################### Extra Hard Starting Project ######################
 
 # 1. Update the birthdays.csv
