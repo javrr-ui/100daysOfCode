@@ -28,11 +28,13 @@ if len(congratulations_list) > 0:
         connection.starttls()
         connection.login(user=sender_email, password=password)
 
-    for person in congratulations_list:
-        number = randint(1, 3)
-        with open(f"letter_templates/letter_{number}.txt", "r") as letter_file:
-            letter = letter_file.read()
-        letter = letter.replace("[NAME]", person["name"])
+        for person in congratulations_list:
+            number = randint(1, 3)
+            with open(f"letter_templates/letter_{number}.txt", "r") as letter_file:
+                letter = letter_file.read()
+            letter = letter.replace("[NAME]", person["name"])
+            connection.sendmail(from_addr=sender_email, to_addrs=person["email"],
+                                msg=f"Subject:It's your birthday\n\n{letter}")
 
 # 4. Send the letter generated in step 3 to that person's email address.
 
