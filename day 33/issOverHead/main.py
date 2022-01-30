@@ -12,13 +12,6 @@ with open("credentials.json", "r") as file:
 MY_LAT = 19.377713  # Your latitude
 MY_LONG = -99.105526  # Your longitude
 
-response = requests.get(url="http://api.open-notify.org/iss-now.json")
-response.raise_for_status()
-data = response.json()
-
-iss_latitude = float(data["iss_position"]["latitude"])
-iss_longitude = float(data["iss_position"]["longitude"])
-
 # Your position is within +5 or -5 degrees of the ISS position.
 
 
@@ -35,6 +28,12 @@ sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
 sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
 
 while True:
+    response = requests.get(url="http://api.open-notify.org/iss-now.json")
+    response.raise_for_status()
+    data = response.json()
+    iss_latitude = float(data["iss_position"]["latitude"])
+    iss_longitude = float(data["iss_position"]["longitude"])
+
     time_now = datetime.now()
     # If the ISS is close to my current position
     # and it is currently dark
