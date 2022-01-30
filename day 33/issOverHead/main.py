@@ -40,5 +40,7 @@ time_now = datetime.now()
 # Then send me an email to tell me to look up.
 # BONUS: run the code every 60 seconds.
 
-
+with smtplib.SMTP("smtp.gmail.com") as connection:
+    connection.starttls()
+    connection.login(user=email, password=password)
 
