@@ -2,6 +2,7 @@ import requests
 from datetime import datetime
 import smtplib
 import json
+import time
 
 with open("credentials.json", "r") as file:
     credentials = json.load(file)
