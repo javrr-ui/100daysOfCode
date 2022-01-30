@@ -40,11 +40,10 @@ time_now = datetime.now()
 # Then send me an email to tell me to look up.
 # BONUS: run the code every 60 seconds.
 
-with smtplib.SMTP("smtp.gmail.com") as connection:
-    connection.starttls()
-    connection.login(user=email, password=password)
-
-    if (MY_LAT - 5 <= iss_latitude <= MY_LAT + 5) and (MY_LONG - 5 <= iss_longitude <= MY_LONG + 5):
-        if sunset <= time_now.hour <= sunrise:
+if (MY_LAT - 5 <= iss_latitude <= MY_LAT + 5) and (MY_LONG - 5 <= iss_longitude <= MY_LONG + 5):
+    if sunset <= time_now.hour <= sunrise:
+        with smtplib.SMTP("smtp.gmail.com") as connection:
+            connection.starttls()
+            connection.login(user=email, password=password)
             connection.sendmail(from_addr=email, to_addrs="javierpancho12@gmail.com",
                                 msg="Subject: Look up in the sky!\n\n")
