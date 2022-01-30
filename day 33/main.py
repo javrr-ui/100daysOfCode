@@ -9,3 +9,11 @@ import requests
 #
 # iss_position = (longitude, latitude)
 # print(iss_position)
+
+params = {
+    "lat": 19.377713,
+    "lng": -99.105526
+}
+
+response = requests.get(url="https://api.sunrise-sunset.org/json", params=params)
+
