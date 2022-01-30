@@ -24,6 +24,9 @@ data = response.json()
 
 sunrise = data["results"]["sunrise"]
 sunset = data["results"]["sunset"]
+
+time = datetime.datetime.now()
+
 print("sunset", sunset)
 print("sunrise", sunrise)
-
+print(time)
