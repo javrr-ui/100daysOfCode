@@ -16,4 +16,5 @@ params = {
 }
 
 response = requests.get(url="https://api.sunrise-sunset.org/json", params=params)
+response.raise_for_status()
 
