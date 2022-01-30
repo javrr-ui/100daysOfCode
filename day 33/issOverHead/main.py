@@ -3,6 +3,11 @@ from datetime import datetime
 import smtplib
 import json
 
+with open("credentials.json", "r") as file:
+    credentials = json.load(file)
+    email = credentials["email"]
+    password = credentials["password"]
+
 MY_LAT = 19.377713 # Your latitude
 MY_LONG = -99.105526 # Your longitude
 
