@@ -34,17 +34,17 @@ data = response.json()
 sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
 sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
 
-time_now = datetime.now()
-
-# If the ISS is close to my current position
-# and it is currently dark
-# Then send me an email to tell me to look up.
-# BONUS: run the code every 60 seconds.
-
-if (MY_LAT - 5 <= iss_latitude <= MY_LAT + 5) and (MY_LONG - 5 <= iss_longitude <= MY_LONG + 5):
-    if sunset <= time_now.hour <= sunrise:
-        with smtplib.SMTP("smtp.gmail.com") as connection:
-            connection.starttls()
-            connection.login(user=email, password=password)
-            connection.sendmail(from_addr=email, to_addrs="javierpancho12@gmail.com",
-                                msg="Subject: Look up in the sky!\n\n")
+while True:
+    time_now = datetime.now()
+    # If the ISS is close to my current position
+    # and it is currently dark
+    # Then send me an email to tell me to look up.
+    # BONUS: run the code every 60 seconds.
+    if (MY_LAT - 5 <= iss_latitude <= MY_LAT + 5) and (MY_LONG - 5 <= iss_longitude <= MY_LONG + 5):
+        if sunset <= time_now.hour <= sunrise:
+            with smtplib.SMTP("smtp.gmail.com") as connection:
+                connection.starttls()
+                connection.login(user=email, password=password)
+                connection.sendmail(from_addr=email, to_addrs="javierpancho12@gmail.com",
+                                    msg="Subject: Look up in the sky!\n\n")
+    time.sleep(60)
