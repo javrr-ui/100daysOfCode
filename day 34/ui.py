@@ -15,4 +15,8 @@ class QuizInterface:
         self.question_canvas.create_text(150, 125, width=300, text="Text", font=("Arial", 20, "italic"), fill=THEME_COLOR)
         self.question_canvas.grid(column=0, row=1, columnspan=2)
 
+        true_img = PhotoImage(file="images/true.png")
+        self.true_button = Button(image=true_img)
+        self.true_button.grid(column=0, row=2)
+
         self.window.mainloop()
