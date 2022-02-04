@@ -21,7 +21,7 @@ class QuizInterface:
         self.true_button.grid(column=0, row=2)
 
         false_img = PhotoImage(file="images/false.png")
-        self.false_button = Button(image=false_img, highlightthickness=0, command=lambda :  self.check_answer("False"))
+        self.false_button = Button(image=false_img, highlightthickness=0, command=lambda:  self.check_answer("False"))
         self.false_button.grid(column=1, row=2)
 
         self.get_next_question()
