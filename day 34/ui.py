@@ -34,3 +34,5 @@ class QuizInterface:
     def check_answer(self, user_answer):
         self.quiz.check_answer(user_answer)
 
+    def update_score(self):
+        self.score_label.config(text=f"Score: {self.quiz.score}")
