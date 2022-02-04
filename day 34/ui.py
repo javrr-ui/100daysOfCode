@@ -25,3 +25,6 @@ class QuizInterface:
         self.false_button.grid(column=1, row=2)
 
         self.window.mainloop()
+
+    def get_next_question(self):
+        self.question_canvas.itemconfig(self.question_text, text=self.quiz.next_question())
