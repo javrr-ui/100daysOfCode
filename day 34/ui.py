@@ -29,6 +29,7 @@ class QuizInterface:
         self.window.mainloop()
 
     def get_next_question(self):
+        self.question_canvas.config(bg="white")
         self.question_canvas.itemconfig(self.question_text, text=self.quiz.next_question())
 
     def check_answer(self, user_answer):
