@@ -35,7 +35,15 @@ class QuizInterface:
     def check_answer(self, user_answer):
         is_right = self.quiz.check_answer(user_answer)
         self.update_score()
-        self.get_next_question()
+        self.give_feedback(is_right)
 
     def update_score(self):
         self.score_label.config(text=f"Score: {self.quiz.score}")
+
+    def give_feedback(self, is_right):
+        if is_right:
+            self.question_canvas.config(bg="green")
+        else:
+            self.question_canvas.config(bg="red")
+
+        self.window.after(1000, self.get_next_question)
