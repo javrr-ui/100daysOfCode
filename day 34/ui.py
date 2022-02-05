@@ -30,7 +30,12 @@ class QuizInterface:
 
     def get_next_question(self):
         self.question_canvas.config(bg="white")
-        self.question_canvas.itemconfig(self.question_text, text=self.quiz.next_question())
+        if self.quiz.still_has_questions():
+            self.question_canvas.itemconfig(self.question_text, text=self.quiz.next_question())
+        else:
+            self.question_canvas.itemconfig(self.question_text, text="There is no more questions")
+            self.false_button.config(state="disabled")
+            self.true_button.config(state="disabled")
 
     def check_answer(self, user_answer):
         is_right = self.quiz.check_answer(user_answer)
