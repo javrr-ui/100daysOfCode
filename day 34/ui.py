@@ -32,7 +32,7 @@ class QuizInterface:
         self.question_canvas.itemconfig(self.question_text, text=self.quiz.next_question())
 
     def check_answer(self, user_answer):
-        self.quiz.check_answer(user_answer)
+        is_right = self.quiz.check_answer(user_answer)
         self.update_score()
         self.get_next_question()
 
