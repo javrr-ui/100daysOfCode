@@ -1,7 +1,9 @@
 import requests
+import os
+from dotenv import load_dotenv, dotenv_values 
+load_dotenv()
 
-api_key = "6305e293bf13b8ae394e4574bf17e79d"
-url = f"https://api.openweathermap.org/data/2.5/onecall?lat={19.432608}&lon={-99.133209}&appid={api_key}"
+url = f"https://api.openweathermap.org/data/3.0/onecall?lat={19.432608}&lon={-99.133209}&appid={os.getenv("API_KEY")}"
 response = requests.get(url)
 print(f"Status code: {response.status_code}")
 print(response.json())
